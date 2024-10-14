@@ -1,19 +1,32 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: '#F1F5FC',
+        primary: '#0B2336',
+        accent: '#927B2B',
+      },
+      fontFamily: {
+        sans: ['Alegreya Sans', 'sans-serif'],
+      },
+      fontWeight: {
+        b: '700', // жирный
+        l: '300', // тонкий
+      },
+      fontSize: {
+        xs: ['12px', 'auto'],
+        s: ['14px', 'auto'],
+        m: ['16px', 'auto'],
+        l: ['24px', 'auto'],
+        xl: ['28px', 'auto'],
+        xxl: ['36px', 'auto'], // для xxl
+      },
+      spacing: {
+        32: '32px',
+        28: '28px',
+        185: '185px',
       },
     },
   },
   plugins: [],
-};
-export default config;
+}
