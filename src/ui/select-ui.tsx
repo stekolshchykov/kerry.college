@@ -14,9 +14,9 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
     const ref = useRef<HTMLDivElement>(null);
 
     const handleOptionClick = (option: string) => {
+        setIsOpen(false); // Закрытие списка после выбора
         setSelectedOption(option); // Сохранение выбранной опции в состояние
         onSelect(option); // Вызов callback для передачи выбранного значения
-        setIsOpen(false); // Закрытие списка после выбора
     };
 
     const toggleDropdown = () => {
@@ -36,6 +36,10 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    useEffect(() => {
+        setIsOpen(false)
+    }, [selectedOption]);
 
     return (
         <div className={`relative w-full ${className}`} ref={ref}>
@@ -61,7 +65,7 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
                     </span>
                 </div>
 
-                {/* Выпадающий список */}
+                {/* Выпадающий список без портала */}
                 {isOpen && (
                     <div
                         className="absolute z-50 bg-white border border-gray-300 rounded-[5px] shadow-lg max-h-60 overflow-auto"
@@ -75,7 +79,10 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
                             <div
                                 key={index}
                                 className="cursor-pointer p-2 hover:bg-gray-100 text-black"
-                                onClick={() => handleOptionClick(option)} // Выбор опции
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    handleOptionClick(option)
+                                }} // Выбор опции
                             >
                                 {option}
                             </div>

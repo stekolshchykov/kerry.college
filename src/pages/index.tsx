@@ -18,8 +18,8 @@ const Home = observer(() => {
                 <PageInfoUi title={"Schedule"} subTitle={"In charge of updates: Oleksandr Dosenko"}/>
             </PageLayout>
 
-            <PageLayout isContainer={true} className={"mb-[50px]"}>
-                <div className="col-12 py-[50px]">
+            <PageLayout isContainer={true} className={"mb-[25px] mt-[50px]"}>
+                <div className="col-12 py-[50px] p-0 m-0">
                     <div className={"flex gap-3 justify-between bg-black p-[25px]"}>
                         <SelectUI
                             className={"text-white"}
@@ -35,19 +35,23 @@ const Home = observer(() => {
                         />
                     </div>
                 </div>
+            </PageLayout>
+            <PageLayout isContainer={false}
+                        className={"mb-[50px] sm:max-w-[1280px] md:max-w-[1280px] lg:max-w-[1280px] xl:max-w-[1536px] 2xl:max-w-[1536px] m-auto"}>
+
                 {selectedCourse &&
                     <div
-                        className="col-12"> {/* Add overflow-x-auto for horizontal scroll */}
+                        className="col-12  overflow-x-auto"> {/* Add overflow-x-auto for horizontal scroll */}
                         {/* Output the schedule as a table */}
-                        <table className={"min-w-full"}>
+                        <table className={"min-w-full "}>
                             <thead>
                             <tr>
-                                <th className={"border-[1px] p-3 text-[18px]"}></th>
-                                <th className={"border-[1px] p-3 text-[18px]"}>Monday</th>
-                                <th className={"border-[1px] p-3 text-[18px]"}>Tuesday</th>
-                                <th className={"border-[1px] p-3 text-[18px]"}>Wednesday</th>
-                                <th className={"border-[1px] p-3 text-[18px]"}>Thursday</th>
-                                <th className={"border-[1px] p-3 text-[18px]"}>Friday</th>
+                                <th className={"border-[1px] p-3 text-[18px] min-w-[120px]"}></th>
+                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Monday</th>
+                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Tuesday</th>
+                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Wednesday</th>
+                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Thursday</th>
+                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Friday</th>
                             </tr>
                             </thead>
                             <tbody>
