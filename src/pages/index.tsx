@@ -3,7 +3,6 @@ import {useRootStore} from "@/providers/RootStoreProvider";
 import PageInfoUi from "@/ui/page-info-ui";
 import SelectUI from "@/ui/select-ui";
 import logger, {logLevelEnum} from "@/util/LokiLogger";
-import {lookup} from 'geoip-lite';
 import {observer} from "mobx-react-lite";
 import {GetServerSideProps} from "next";
 import React from "react";
@@ -16,7 +15,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
     // Получаем данные о геолокации с помощью geoip-lite
-    const geo = lookup(`${ip}`);
+    // const geo = lookup(`${ip}`);
 
     // Разбираем user-agent для информации о браузере и устройстве
     const agent = useragent.parse(`${req.headers['user-agent']}`);
@@ -27,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     // Создаем объект для логирования
     const logObject = {
         ip: ip,
-        geo: geo,
+        // geo: geo,
         browser: agent.toAgent(),
         os: agent.os.toString(),
         device: agent.device.toString(),
