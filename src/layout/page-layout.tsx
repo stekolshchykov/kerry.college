@@ -10,15 +10,15 @@ export default function PageLayout(props: PropsI) {
             {props.children &&
                 <div
                     className={`
-                        max-w-[100vw] overflow-hidden
+                        max-w-[100vw]
                         ${props.className && props.className}
                     `}>
-                    { props.isContainer && <div className={"container"}>
+                    {props.isContainer && <div className={"container"}>
                         <div className="row">
                             {props.children}
                         </div>
-                    </div> }
-                    { !props.isContainer && props.children && <>{props.children}</> }
+                    </div>}
+                    {!props.isContainer && props.children && <>{props.children}</>}
                 </div>
             }
         </>
