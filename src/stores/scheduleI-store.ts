@@ -1,28 +1,22 @@
-import {CourseI, scheduleData, ScheduleI} from "@/data";
+import {dataCourse, DataI} from "@/data";
 
 class ScheduleStore {
 
-    data: ScheduleI = {
-        note: "",
-        course: []
-    }
+    data: DataI = dataCourse;
 
-    constructor() {
-        this.load()
-    }
+    getCourseTitles = (): string[] => {
+        return this.data.course.map(c => c.title)
+    };
 
-    getCourseTitle = (): string[] => {
-        return this.data.course.map(c => c.courseTitle) || []
-    }
-
-    getCourseByTitle = (title: string): CourseI | null => {
-        return this.data.course.find(c => c.courseTitle == title) || null
-    }
-
-    private load = () => {
-        this.data = scheduleData
-    }
+    getCourseByTitle = (title: string) => {
+        for (const course of this.data.course) {
+            if (course.title === title) {
+                return course
+            }
+        }
+        return null; // Return null if no matching course is found
+    };
 
 }
 
-export default ScheduleStore
+export default ScheduleStore;
