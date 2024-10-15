@@ -12,14 +12,15 @@ const Home = observer(() => {
     // Get the selected course's schedule
     const selectedCourse = scheduleStore.getCourseByTitle(selectedCourseTitle);
 
-    console.log("+++selectedCourseSchedule", selectedCourse)
+    console.log("+++selectedCourseSchedule", selectedCourse);
+
     return (
         <>
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
                 <PageInfoUi title={"Schedule"} subTitle={"Обновление списка: 23/03/24"}/>
             </PageLayout>
 
-            <PageLayout isContainer={true}>
+            <PageLayout isContainer={true} className={"mb-[50px]"}>
                 <div className="col-12 py-[50px]">
                     <div className={"flex gap-3 justify-between bg-black p-[25px]"}>
                         <SelectUI
@@ -36,35 +37,43 @@ const Home = observer(() => {
                         />
                     </div>
                 </div>
-                <div className="col-12">
-                    {/* Output the schedule as a table */}
-                    <table className={"w-full"}>
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th className={"border-[1px] p-3"}>Monday</th>
-                            <th className={"border-[1px] p-3"}>Tuesday</th>
-                            <th className={"border-[1px] p-3"}>Wednesday</th>
-                            <th className={"border-[1px] p-3"}>Thursday</th>
-                            <th className={"border-[1px] p-3"}>Friday</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {scheduleStore.data.times?.map((l, k) => {
-                            return <tr key={k}>
-                                <td className={"border-[1px]  p-3"}>{l}</td>
-                                {selectedCourse?.schedule.map((ll, kk) => {
-                                    return <td key={kk} className={"border-[1px]  p-3"}>
-                                        <div>{ll[k]?.title}</div>
-                                        <div>{ll[k]?.lecture}</div>
-                                        <div>{ll[k]?.room}</div>
-                                    </td>
-                                })}
+                {selectedCourse &&
+                    <div
+                        className="col-12"> {/* Add overflow-x-auto for horizontal scroll */}
+                        {/* Output the schedule as a table */}
+                        <table className={"min-w-full"}>
+                            <thead>
+                            <tr>
+                                <th className={"border-[1px] p-3 text-[18px]"}></th>
+                                <th className={"border-[1px] p-3 text-[18px]"}>Monday</th>
+                                <th className={"border-[1px] p-3 text-[18px]"}>Tuesday</th>
+                                <th className={"border-[1px] p-3 text-[18px]"}>Wednesday</th>
+                                <th className={"border-[1px] p-3 text-[18px]"}>Thursday</th>
+                                <th className={"border-[1px] p-3 text-[18px]"}>Friday</th>
                             </tr>
-                        })}
-                        </tbody>
-                    </table>
-                </div>
+                            </thead>
+                            <tbody>
+                            {scheduleStore.data.times?.map((l, k) => {
+                                return (
+                                    <tr key={k} className={k % 2 === 0 ? "bg-gray-50" : ""}>
+                                        <td className={"border-[1px] p-3 w-[120px]"}>{l}</td>
+                                        {selectedCourse?.schedule.map((ll, kk) => {
+                                            return (
+                                                <td key={kk} className={"border-[1px] p-3"}>
+                                                    {!ll[k]?.title && "REST"}
+                                                    <div>{ll[k]?.title}</div>
+                                                    <div>{ll[k]?.lecture}</div>
+                                                    <div>{ll[k]?.room}</div>
+                                                </td>
+                                            );
+                                        })}
+                                    </tr>
+                                );
+                            })}
+                            </tbody>
+                        </table>
+                    </div>
+                }
             </PageLayout>
         </>
     );

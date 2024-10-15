@@ -15,7 +15,7 @@ const FooterUi = () => {
     }, []); // Empty dependency array to run only once when the component mounts
 
     return (
-        <div className="container-full border-t-[1px] border-mina">
+        <div className="container-full border-t-[1px] border-mina max-w-[100vw] overflow-hidden">
             <div className="row">
                 <div className="col py-[50px]">
                     <div className="container">
