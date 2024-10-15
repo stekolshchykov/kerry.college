@@ -1,4 +1,3 @@
-// @ts-ignore
 import Quote from 'inspirational-quotes';
 import {useEffect, useState} from 'react';
 
