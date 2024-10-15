@@ -22,7 +22,7 @@ const HeaderUi = () => {
     ]
 
     return <div>
-        <div className="container-full">
+        <div className="container-full max-w-[100vw] overflow-hidden">
             <div className="row">
                 <div className="col">
                     <div className="container">

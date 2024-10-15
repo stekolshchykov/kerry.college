@@ -10,8 +10,8 @@ export default function PageLayout(props: PropsI) {
             {props.children &&
                 <div
                     className={`
+                        max-w-[100vw] overflow-hidden
                         ${props.className && props.className}
-                        bg-mina text-white
                     `}>
                     { props.isContainer && <div className={"container"}>
                         <div className="row">
