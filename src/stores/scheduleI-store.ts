@@ -12,7 +12,7 @@ class ScheduleStore {
     }
 
     getCourseTitle = (): string[] => {
-        return this.data.course.map(c => c.courseTitle)
+        return this.data.course.map(c => c.courseTitle) || []
     }
 
     getCourseByTitle = (title: string): CourseI[] => {
