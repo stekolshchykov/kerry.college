@@ -8,7 +8,7 @@ const HeaderUi = () => {
     const path = router.pathname
 
 
-    const links:{
+    const links: {
         title: string
         link: string
         isActive: boolean
@@ -22,7 +22,7 @@ const HeaderUi = () => {
     ]
 
     return <div>
-        <div className="container-full max-w-[100vw] overflow-hidden">
+        <div className="container-full max-w-[100vw]">
             <div className="row">
                 <div className="col">
                     <div className="container">
@@ -31,13 +31,15 @@ const HeaderUi = () => {
                                 <div className={"flex justify-between align-items-center"}>
                                     <img className={"w-[200px]"} src={"/logo.png"} alt={"Logo"}/>
                                     <ul className={"gap-4 hidden lg:flex"}>
-                                        {links.map((l,k) => <li key={k} className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer`}>
+                                        {links.map((l, k) => <li key={k}
+                                                                 className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer`}>
                                             <Link href={l.link} onClick={e => e.preventDefault()}>
                                                 {l.title}
                                             </Link>
                                         </li>)}
                                     </ul>
-                                    <RxHamburgerMenu size={30} className={"lg:hidden flex hover:text-accent transition cursor-pointer"} />
+                                    <RxHamburgerMenu size={30}
+                                                     className={"lg:hidden flex hover:text-accent transition cursor-pointer"}/>
                                 </div>
                             </div>
                         </div>
