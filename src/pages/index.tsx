@@ -12,8 +12,6 @@ const Home = observer(() => {
     // Get the selected course's schedule
     const selectedCourse = scheduleStore.getCourseByTitle(selectedCourseTitle);
 
-    console.log("+++selectedCourseSchedule", selectedCourse);
-
     return (
         <>
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
