@@ -42,19 +42,19 @@ const Home = observer(() => {
                         <thead>
                         <tr>
                             <th></th>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
+                            <th className={"border-[1px] p-3"}>Monday</th>
+                            <th className={"border-[1px] p-3"}>Tuesday</th>
+                            <th className={"border-[1px] p-3"}>Wednesday</th>
+                            <th className={"border-[1px] p-3"}>Thursday</th>
+                            <th className={"border-[1px] p-3"}>Friday</th>
                         </tr>
                         </thead>
                         <tbody>
                         {scheduleStore.data.times?.map((l, k) => {
                             return <tr key={k}>
-                                <td>{l}</td>
+                                <td className={"border-[1px]  p-3"}>{l}</td>
                                 {selectedCourse?.schedule.map((ll, kk) => {
-                                    return <td key={kk}>
+                                    return <td key={kk} className={"border-[1px]  p-3"}>
                                         <div>{ll[k]?.title}</div>
                                         <div>{ll[k]?.lecture}</div>
                                         <div>{ll[k]?.room}</div>

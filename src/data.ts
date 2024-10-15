@@ -49,6 +49,22 @@ const dataCourse: DataI = {
                     {lecture: "l1", title: "32", room: "2"},
                     {lecture: "l1", title: "32", room: "2"},
                     {lecture: "l1", title: "32", room: "2"}
+                ],
+                [ // серда
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"}
+                ],
+                [ // серда
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"},
+                    {lecture: "l1", title: "32", room: "2"}
                 ]
 
             ]
