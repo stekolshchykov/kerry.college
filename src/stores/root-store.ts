@@ -15,7 +15,7 @@ export class RootStore {
     }
 
     hydrate(data: RootStoreHydration) {
-        //
+      console.log(data)
     }
 
 }

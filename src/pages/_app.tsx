@@ -5,20 +5,21 @@ import HeaderUi from "@/ui/header-ui";
 import type {AppProps} from 'next/app';
 import Head from "next/head";
 import 'bootstrap/dist/css/bootstrap.css';
-// import "@/globals.scss";
+import "@/globals.css";
 import React from "react";
+
 
 
 function MyApp({Component}: AppProps) {
 
     return (
         <RootStoreProvider>
-                <Head>
-                    <title>!!!</title>
-                </Head>
-                <HeaderUi/>
-                <Component />
-                <FooterUi/>
+            <Head>
+                <title>!!!</title>
+            </Head>
+            <HeaderUi/>
+            <Component/>
+            <FooterUi/>
         </RootStoreProvider>
     );
 }
