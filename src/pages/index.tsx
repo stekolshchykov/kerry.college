@@ -2,8 +2,44 @@ import PageLayout from "@/layout/page-layout";
 import {useRootStore} from "@/providers/RootStoreProvider";
 import PageInfoUi from "@/ui/page-info-ui";
 import SelectUI from "@/ui/select-ui";
+import logger, {logLevelEnum} from "@/util/LokiLogger";
+import {lookup} from 'geoip-lite';
 import {observer} from "mobx-react-lite";
+import {GetServerSideProps} from "next";
 import React from "react";
+import useragent from 'useragent';
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const req = context.req;
+
+    // Получаем IP-адрес
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+    // Получаем данные о геолокации с помощью geoip-lite
+    const geo = lookup(`${ip}`);
+
+    // Разбираем user-agent для информации о браузере и устройстве
+    const agent = useragent.parse(`${req.headers['user-agent']}`);
+
+    // Получаем текущий URL страницы
+    const currentPage = context.resolvedUrl;
+
+    // Создаем объект для логирования
+    const logObject = {
+        ip: ip,
+        geo: geo,
+        browser: agent.toAgent(),
+        os: agent.os.toString(),
+        device: agent.device.toString(),
+        currentPage: currentPage,
+        timestamp: new Date().toISOString(),
+    };
+
+    logger.log(logObject, logLevelEnum.Info, {})
+
+    return {props: {}};
+}
+
 
 const Home = observer(() => {
     const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Web Development");
