@@ -1,6 +1,14 @@
+export interface ScheduleLineI {
+    weekDay: number;
+    time?: string;
+    title?: string,
+    room?: number,
+    lecturer?: string
+}
+
 export interface CourseI {
     courseTitle: string,
-    schedule: { weekDay: number; time?: string; title?: string, room?: number, lecturer?: string }[];
+    schedule: ScheduleLineI[];
 }
 
 export interface ScheduleI {

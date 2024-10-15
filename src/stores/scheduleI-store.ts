@@ -15,8 +15,8 @@ class ScheduleStore {
         return this.data.course.map(c => c.courseTitle) || []
     }
 
-    getCourseByTitle = (title: string): CourseI[] => {
-        return this.data.course.filter(c => c.courseTitle == title)
+    getCourseByTitle = (title: string): CourseI | null => {
+        return this.data.course.find(c => c.courseTitle == title) || null
     }
 
     private load = () => {
