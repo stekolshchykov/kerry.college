@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import {createPortal} from 'react-dom';
+import React, {useEffect, useRef, useState} from 'react';
 import {IoIosArrowDown, IoIosArrowUp} from 'react-icons/io';
 
 interface SelectUIProps {
@@ -12,7 +11,7 @@ interface SelectUIProps {
 const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false); // Состояние для управления открытием/закрытием списка
     const [selectedOption, setSelectedOption] = useState<string>(''); // Состояние для выбранной опции
-    const [dropdownPosition, setDropdownPosition] = useState<{ top: number; left: number }>({top: 0, left: 0});
+    const ref = useRef<HTMLDivElement>(null);
 
     const handleOptionClick = (option: string) => {
         setSelectedOption(option); // Сохранение выбранной опции в состояние
@@ -20,14 +19,26 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
         setIsOpen(false); // Закрытие списка после выбора
     };
 
-    const toggleDropdown = (e: React.MouseEvent<HTMLDivElement>) => {
-        const rect = e.currentTarget.getBoundingClientRect(); // Получаем положение компонента
-        setDropdownPosition({top: rect.bottom, left: rect.left}); // Задаем положение для списка
+    const toggleDropdown = () => {
         setIsOpen((prev) => !prev); // Открываем/закрываем список
     };
 
+    // Закрытие при клике вне компонента
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (ref.current && !ref.current.contains(event.target as Node)) {
+                setIsOpen(false); // Закрываем список при клике вне компонента
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
-        <div className={`relative w-full ${className}`}>
+        <div className={`relative w-full ${className}`} ref={ref}>
             {/* Заголовок */}
             <label className="block text-sm font-medium">{label}</label>
 
@@ -50,29 +61,27 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
                     </span>
                 </div>
 
-                {/* Выпадающий список с использованием портала */}
-                {isOpen &&
-                    createPortal(
-                        <div
-                            className="absolute z-50 bg-white border border-gray-300 rounded-[5px] shadow-lg overflow-auto max-h-60"
-                            style={{
-                                top: `${dropdownPosition.top}px`,
-                                left: `${dropdownPosition.left}px`,
-                                width: '100%'
-                            }}
-                        >
-                            {options.map((option, index) => (
-                                <div
-                                    key={index}
-                                    className="cursor-pointer p-2 hover:bg-gray-100 text-black"
-                                    onClick={() => handleOptionClick(option)} // Выбор опции
-                                >
-                                    {option}
-                                </div>
-                            ))}
-                        </div>,
-                        document.body // Рендерим элемент в body, чтобы избежать обрезания
-                    )}
+                {/* Выпадающий список */}
+                {isOpen && (
+                    <div
+                        className="absolute z-50 bg-white border border-gray-300 rounded-[5px] shadow-lg max-h-60 overflow-auto"
+                        style={{
+                            top: '100%', // Позиционируем список под областью выбора
+                            left: 0,
+                            width: '100%', // Ширина списка совпадает с шириной области выбора
+                        }}
+                    >
+                        {options.map((option, index) => (
+                            <div
+                                key={index}
+                                className="cursor-pointer p-2 hover:bg-gray-100 text-black"
+                                onClick={() => handleOptionClick(option)} // Выбор опции
+                            >
+                                {option}
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ import {observer} from "mobx-react-lite";
 import React from "react";
 
 const Home = observer(() => {
-    const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("");
+    const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Web Development");
     const {scheduleStore} = useRootStore();
 
     // Get the selected course's schedule
@@ -15,7 +15,7 @@ const Home = observer(() => {
     return (
         <>
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
-                <PageInfoUi title={"Schedule"} subTitle={"Обновление списка: 23/03/24"}/>
+                <PageInfoUi title={"Schedule"} subTitle={"In charge of updates: Oleksandr Dosenko"}/>
             </PageLayout>
 
             <PageLayout isContainer={true} className={"mb-[50px]"}>

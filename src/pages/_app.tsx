@@ -9,13 +9,12 @@ import "@/globals.css";
 import React from "react";
 
 
-
 function MyApp({Component}: AppProps) {
 
     return (
         <RootStoreProvider>
             <Head>
-                <title>!!!</title>
+                <title>Kerry College</title>
             </Head>
             <HeaderUi/>
             <Component/>
