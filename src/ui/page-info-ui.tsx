@@ -1,6 +1,6 @@
 interface PropsI {
     title: string,
-    subTitle?: string,
+    subTitle?: any,
     color?: string
 }
 

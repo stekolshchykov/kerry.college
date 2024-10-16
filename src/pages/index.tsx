@@ -50,7 +50,12 @@ const Home = observer(() => {
     return (
         <>
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
-                <PageInfoUi title={"Schedule"} subTitle={"In charge of updates: Oleksandr Dosenko"}/>
+                <PageInfoUi title={"Schedule"}
+                            subTitle={
+                                <div>
+                                    In charge of updates: <a href="mailto:o.s.dosenko@gmail.com">Oleksandr Dosenko</a>
+                                </div>
+                            }/>
             </PageLayout>
 
             <PageLayout isContainer={true} className={"mb-[25px] mt-[50px]"}>

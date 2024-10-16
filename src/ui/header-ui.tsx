@@ -7,7 +7,6 @@ const HeaderUi = () => {
     const router = useRouter()
     const path = router.pathname
 
-
     const links: {
         title: string
         link: string
