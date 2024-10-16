@@ -13,12 +13,12 @@ const HeaderUi = () => {
         link: string
         isActive: boolean
     }[] = [
-        {title: "Home", link: "/", isActive: path === "/home"},
+        {title: "Home", link: "/", isActive: path === "/test"},
         {title: "Schedule", link: "/", isActive: path === "/"},
-        {title: "Campus map", link: "/campus", isActive: path === "/campus"},
+        {title: "Campus map", link: "/", isActive: path === "/test"},
         {title: "Staff", link: "/staff", isActive: path === "/staff"},
-        {title: "News", link: "/news", isActive: path === "/news"},
-        {title: "Ideas", link: "/ideas", isActive: path === "/ideas"},
+        {title: "News", link: "/", isActive: path === "/test"},
+        {title: "Ideas", link: "/", isActive: path === "/test"},
     ]
 
     return <div>
