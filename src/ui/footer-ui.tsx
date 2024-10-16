@@ -26,8 +26,15 @@ const FooterUi = () => {
                                     <div className={"w-full"}>
                                         {quoteText && (
                                             <>
-                                                <div className={"text-l italic font-light leading-[0.9]"}>‟{quoteText}”
+                                                <div className={"flex gap-1 align-top"}>
+                                                    ‟
+                                                    <div
+                                                        className={"text-l quote font-light leading-[0.9]"}>
+                                                        {quoteText
+                                                        }</div>
+                                                    ”
                                                 </div>
+
                                                 <div className={"text-s"}>{quoteAuthor}</div>
                                             </>
                                         )}
