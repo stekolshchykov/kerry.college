@@ -34,7 +34,7 @@ const HeaderUi = () => {
                                         {links.map((l, k) =>
                                             <li key={k}
                                                 className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer`}>
-                                                <Link href={l.link} onClick={e => e.preventDefault()}>
+                                                <Link href={l.link}>
                                                     {l.title}
                                                 </Link>
                                             </li>)}
