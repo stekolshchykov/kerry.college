@@ -137,86 +137,116 @@ const dataCourse: DataI = {
     ],
     course: [
         {
-            title: "Web Development",
-            schedule: [
-                [ // Понедельник
-                    {lecture: "Sioban Doe", title: "HTML Basics", room: "101"},
-                    {lecture: "Jane Smith", title: "CSS Styling", room: "102"},
-                    {}, // Перемена
-                    {lecture: "John Doe", title: "JavaScript Introduction", room: "103"},
-                    {lecture: "Jane Smith", title: "Responsive Design", room: "102"},
-                ],
-                [ // Вторник
-                    {lecture: "John Doe", title: "JavaScript Functions", room: "103"},
-                    {lecture: "Jane Smith", title: "APIs and AJAX", room: "102"},
-                    {}, // Перемена
-                    {lecture: "John Doe", title: "Project Workshop", room: "104"},
-                    {},
-                ],
-                [ // Среда
-                    {lecture: "Jane Smith", title: "React Basics", room: "105"},
-                    {lecture: "John Doe", title: "State Management", room: "103"},
-                    {}, // Перемена
-                    {lecture: "Jane Smith", title: "Component Lifecycle", room: "105"},
-                    {lecture: "John Doe", title: "Routing in React", room: "104"},
-                ],
-                [ // Четверг
-                    {lecture: "John Doe", title: "Node.js Introduction", room: "201"},
-                    {lecture: "Jane Smith", title: "Express.js Basics", room: "202"},
-                    {}, // Перемена
-                    {lecture: "John Doe", title: "Database Connections", room: "203"},
-                    {},
-                ],
-                [ // Пятница
-                    {lecture: "Jane Smith", title: "Deployment Strategies", room: "201"},
-                    {lecture: "John Doe", title: "Testing Basics", room: "202"},
-                    {}, // Перемена
-                    {lecture: "Jane Smith", title: "Final Project Review", room: "203"},
-                    {},
-                ]
-            ]
-        },
-        {
-            title: "Data Science",
-            schedule: [
-                [ // Понедельник
-                    {lecture: "Alice Brown", title: "Python Basics", room: "301"},
-                    {lecture: "Bob White", title: "Data Visualization", room: "302"},
-                    {}, // Перемена
-                    {lecture: "Alice Brown", title: "Statistics Fundamentals", room: "303"},
-                    {lecture: "Bob White", title: "Machine Learning Intro", room: "302"},
-                ],
-                [ // Вторник
-                    {lecture: "Alice Brown", title: "Data Cleaning", room: "301"},
-                    {lecture: "Bob White", title: "Pandas Library", room: "302"},
-                    {}, // Перемена
-                    {lecture: "Alice Brown", title: "Data Ethics", room: "303"},
-                    {},
-                ],
-                [ // Среда
-                    {lecture: "Bob White", title: "SQL Basics", room: "304"},
-                    {lecture: "Alice Brown", title: "Data Mining", room: "301"},
-                    {}, // Перемена
-                    {lecture: "Bob White", title: "Data Storytelling", room: "304"},
-                    {lecture: "Alice Brown", title: "Final Project Guidance", room: "301"},
-                ],
-                [ // Четверг
-                    {lecture: "Alice Brown", title: "Big Data Technologies", room: "305"},
-                    {lecture: "Bob White", title: "Data Warehouse Concepts", room: "301"},
-                    {}, // Перемена
-                    {lecture: "Alice Brown", title: "Visualization Tools", room: "302"},
-                    {},
-                ],
-                [ // Пятница
-                    {lecture: "Bob White", title: "Capstone Project", room: "301"},
-                    {lecture: "Alice Brown", title: "Career Opportunities", room: "302"},
-                    {}, // Перемена
-                    {lecture: "Bob White", title: "Guest Speaker Session", room: "303"},
-                    {},
-                ]
-            ]
-        },
-        {
+                title: "Software Development",
+    schedule: [
+        [ // Понедельник
+            {},
+            {lecture: "Brian O'Shea", title: "Work Experience", room: "1"},
+            {}, // Перемена
+            {lecture: "Dorothy Byrne", title: "Math for IT", room: "25"},
+            {lecture: "Amanda O'Donnell", title: "Communications (Level 5)", room: "25"},
+            {}, // Обеденный перерыв
+            {lecture: "Amanda O'Donnell", title: "Communications (Level 5)", room: "1"},
+            {},
+        ],
+        [ // Вторник
+            {lecture: "Maria Brosnan", title: "Programming & Design Principles", room: "31"},
+            {lecture: "Maria Brosnan", title: "Programming & Design Principles", room: "31"},
+            {}, // Перемена
+            {lecture: "Maria Brosnan", title: "Programming & Design Principles", room: "31"},
+            {lecture: "Maria Brosnan", title: "Web Authoring", room: "31"},
+            {}, // Обеденный перерыв
+            {lecture: "Maria Brosnan", title: "Web Authoring", room: "31"},
+            {lecture: "Maria Brosnan", title: "Web Authoring", room: "31"},
+        ],
+        [ // Среда
+            {lecture: "Brian O'Shea", title: "Fundamentals", room: "31"},
+            {lecture: "Brian O'Shea", title: "Fundamentals", room: "31"},
+            {}, // Перемена
+            {lecture: "Brian O'Shea", title: "Fundamentals", room: "31"},
+            {lecture: "Brian O'Shea", title: "Networking Essentials", room: "31"},
+            {}, // Обеденный перерыв
+            {lecture: "Brian O'Shea", title: "Networking Essentials", room: "31"},
+            {lecture: "Brian O'Shea", title: "Networking Essentials", room: "31"},
+        ],
+        [ // Четверг
+            {lecture: "Brian O'Shea", title: "Software Architecture", room: "31"},
+            {lecture: "Brian O'Shea", title: "Software Architecture", room: "31"},
+            {}, // Перемена
+            {lecture: "Brian O'Shea", title: "Software Architecture", room: "31"},
+            {},
+            {}, // Обеденный перерыв
+            {lecture: "Dorothy Byrne", title: "Math for IT", room: "20"},
+            {lecture: "Dorothy Byrne", title: "Math for IT", room: "20"},
+        ],
+        [ // Пятница
+            {lecture: "Brian O'Shea", title: "Operating Systems", room: "31"},
+            {lecture: "Brian O'Shea", title: "Operating Systems", room: "31"},
+            {}, // Перемена
+            {lecture: "Brian O'Shea", title: "Operating Systems", room: "31"},
+            {lecture: "Brian O'Shea", title: "Work Experience", room: "31" },
+            {}, // Обеденный перерыв
+            {},
+            {},
+        ]
+    ]
+},
+{
+    title: "Digital Media Production",
+    schedule: [
+        [ // Понедельник
+            {lecture: "Maria Brosnan", title: "Multimedia Technology", room: "31"},
+            {lecture: "Maria Brosnan", title: "Multimedia Technology", room: "31"},
+            {}, // Перемена
+            {lecture: "Maria Brosnan", title: "Multimedia Technology", room: "31"},
+            {lecture: "Loz Ann McCarthy", title: "Work Experience", room: "31"},
+            {}, // Обеденный перерыв
+            {lecture: "John Collins", title: "Project Management", room: "31"},
+            {lecture: "John Collins", title: "Project Management", room: "31"},
+        ],
+        [ // Вторник
+            {},
+            {},
+            {}, // Перемена
+            {},
+            {lecture: "Loz Ann McCarthy", title: "Studio Location & Sound Production", room: "32"},
+            {}, // Обеденный перерыв
+            {lecture: "Loz Ann McCarthy", title: "Studio Location & Sound Production", room: "32"},
+            {lecture: "Loz Ann McCarthy", title: "Studio Location & Sound Production", room: "32"},
+        ],
+        [ // Среда
+            {lecture: "John Collins", title: "Project Management", room: "1"},
+            {lecture: "Amanda O'Donnell", title: "Communications", room: "1"},
+            {}, // Перемена
+            {lecture: "Amanda O'Donnell", title: "Communications", room: "1"},
+            {lecture: "Shane Murphy", title: "Graphics & Animation", room: "32"},
+            {}, // Обеденный перерыв
+            {lecture: "Shane Murphy", title: "Graphics & Animation", room: "32"},
+            {lecture: "Shane Murphy", title: "Graphics & Animation", room: "32"},
+        ],
+        [ // Четверг
+            {lecture: "Siobhan Murphy", title: "Design Skills", room: "32"},
+            {lecture: "Siobhan Murphy", title: "Design Skills", room: "32"},
+            {}, // Перемена
+            {lecture: "Siobhan Murphy", title: "Design Skills", room: "32"},
+            {lecture: "John Collins", title: "Web Authoring", room: "32"},
+            {}, // Обеденный перерыв
+            {lecture: "John Collins", title: "Web Authoring", room: "32"},
+            {lecture: "John Collins", title: "Web Authoring", room: "32"},
+        ],
+        [ // Пятница
+            {lecture: "Loz Ann McCarthy", title: "Work Experience", room: "32"},
+            {lecture: "Siobhan Murphy", title: "Computer Illustration Graphics", room: "10"},
+            {}, // Перемена
+            {lecture: "Siobhan Murphy", title: "Computer Illustration Graphics", room: "10"},
+            {lecture: "Siobhan Murphy", title: "Computer Illustration Graphics", room: "10"},
+            {}, // Обеденный перерыв
+            {},
+            {},
+        ]
+    ]
+},
+{
             title: "Artificial Intelligence",
             schedule: [
                 [ // Понедельник
