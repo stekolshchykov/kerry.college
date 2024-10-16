@@ -38,9 +38,11 @@ const Staff = () => {
         </PageLayout>
 
         <PageLayout isContainer={true} className={"mb-[25px] mt-[50px]"}>
-            <ul className={"grid grid-cols-2 2xl:grid-cols-10 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2  gap-4 justify-between"}>
-                {dataStaff.map((s, k) => <StaffCard key={k} job={s.job} name={s.name} img={s.img}/>)}
-            </ul>
+            <div className="col px-[25px]">
+                <ul className={"grid grid-cols-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1  gap-4 justify-between"}>
+                    {dataStaff.map((s, k) => <StaffCard key={k} job={s.job} name={s.name} img={s.img}/>)}
+                </ul>
+            </div>
         </PageLayout>
 
     </>

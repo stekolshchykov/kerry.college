@@ -76,12 +76,12 @@ const Home = observer(() => {
                     </div>
                 </div>
             </PageLayout>
-            <PageLayout isContainer={false}
-                        className={"mb-[50px] sm:max-w-[1280px] md:max-w-[1280px] lg:max-w-[1280px] xl:max-w-[1536px] 2xl:max-w-[1536px] m-auto"}>
+            <PageLayout isContainer={true}
+                        className={"mb-[50px] max-w-[1280px] m-auto "}>
 
                 {selectedCourse &&
                     <div
-                        className="col-12  overflow-x-auto mb-[50px]"> {/* Add overflow-x-auto for horizontal scroll */}
+                        className="col-12  overflow-x-auto mb-[50px] px-0"> {/* Add overflow-x-auto for horizontal scroll */}
                         {/* Output the schedule as a table */}
                         <table className={"min-w-full "}>
                             <thead>

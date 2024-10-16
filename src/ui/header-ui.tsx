@@ -21,12 +21,12 @@ const HeaderUi = () => {
     ]
 
     return <div>
-        <div className="container-full max-w-[100vw] overflow-hidden">
+        <div className="container-full max-w-[100vw] max-auto overflow-hidden">
             <div className="row overflow-hidden max-w-[100vw]">
                 <div className="col ">
-                    <div className="container">
+                    <div className="container max-w-[1200px]">
                         <div className="row">
-                            <div className="col py-[50px]">
+                            <div className="col py-[50px] px-[25px]">
                                 <div className={"flex justify-between align-items-center"}>
                                     <img className={"w-[200px]"} src={"/logo.png"} alt={"Logo"}/>
                                     <ul className={"gap-4 hidden lg:flex"}>

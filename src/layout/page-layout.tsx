@@ -13,7 +13,7 @@ export default function PageLayout(props: PropsI) {
                         max-w-[100vw]
                         ${props.className && props.className}
                     `}>
-                    {props.isContainer && <div className={"container"}>
+                    {props.isContainer && <div className={"container max-w-[1200px]"}>
                         <div className="row">
                             {props.children}
                         </div>
