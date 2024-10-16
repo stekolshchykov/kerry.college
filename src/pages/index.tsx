@@ -76,7 +76,7 @@ const Home = observer(() => {
 
                 {selectedCourse &&
                     <div
-                        className="col-12  overflow-x-auto"> {/* Add overflow-x-auto for horizontal scroll */}
+                        className="col-12  overflow-x-auto mb-[50px]"> {/* Add overflow-x-auto for horizontal scroll */}
                         {/* Output the schedule as a table */}
                         <table className={"min-w-full "}>
                             <thead>
