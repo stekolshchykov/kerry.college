@@ -140,7 +140,7 @@ const dataCourse: DataI = {
             title: "Web Development",
             schedule: [
                 [ // Понедельник
-                    {lecture: "John Doe", title: "HTML Basics", room: "101"},
+                    {lecture: "Sioban Doe", title: "HTML Basics", room: "101"},
                     {lecture: "Jane Smith", title: "CSS Styling", room: "102"},
                     {}, // Перемена
                     {lecture: "John Doe", title: "JavaScript Introduction", room: "103"},
