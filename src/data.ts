@@ -190,6 +190,61 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ]
             ]
+        },
+        {
+            title: "Digital Media Production",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Multimedia Technology", room: "31"},
+                    {lecture: "", title: "Multimedia Technology", room: "31"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Multimedia Technology", room: "31"},
+                    {lecture: "", title: "Work Experience", room: "31"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Project Management", room: "31"},
+                    {lecture: "", title: "Project Management", room: "31"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "Studio Location & Sound Production", room: "32"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Studio Location & Sound Production", room: "32"},
+                    {lecture: "", title: "Studio Location & Sound Production", room: "32"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Project Management", room: "1"},
+                    {lecture: "", title: "Communications", room: "1"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Communications", room: "1"},
+                    {lecture: "", title: "Graphics & Animation", room: "32"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Graphics & Animation", room: "32"},
+                    {lecture: "", title: "Graphics & Animation", room: "32"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "Design Skills", room: "32"},
+                    {lecture: "", title: "Design Skills", room: "32"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Design Skills", room: "32"},
+                    {lecture: "", title: "Web Authoring", room: "32"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Web Authoring", room: "32"},
+                    {lecture: "", title: "Web Authoring", room: "32"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Work Experience", room: "32"},
+                    {lecture: "", title: "Computer Illustration Graphics", room: "10"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Computer Illustration Graphics", room: "10"},
+                    {lecture: "", title: "Computer Illustration Graphics", room: "10"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
         }
     ]
 }
