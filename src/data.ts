@@ -410,6 +410,171 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ]
             ]
+        },
+        {
+            title: "Applied Science (Laboratory Techniques)",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Physics", room: "8"},
+                    {lecture: "", title: "Physics", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Biology", room: "8"},
+                    {lecture: "", title: "Biology", room: "8"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "Maths", room: "8"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Work Experience", room: "20"},
+                    {lecture: "", title: "Work Experience", room: "20"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Communications", room: "20"},
+                    {lecture: "", title: "Maths", room: "20"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Environmental sustainability", room: "Term 1"},
+                    {lecture: "", title: "Environmental sustainability", room: "Term 1"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Laboratory Skills", room: "8"},
+                    {lecture: "", title: "Laboratory Skills", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Nutrition", room: "8"},
+                    {lecture: "", title: "Nutrition", room: "8"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Nutrition", room: "8"},
+                    {lecture: "", title: "Biology", room: "8"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "Chemistry", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Laboratory Skills", room: "8"},
+                    {lecture: "", title: "Maths", room: "8"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Assignment Tutorial", room: "8"},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Physics", room: "20"},
+                    {lecture: "", title: "Chemistry", room: "20"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Chemistry", room: "8"},
+                    {lecture: "", title: "Communications", room: "8 / 28"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Advanced Certificate in Early Learning and Care (Stage 1)",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "ECGD", room: "9"},
+                    {lecture: "", title: "ECGD", room: "9"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "CPCS", room: "9"},
+                    {lecture: "", title: "CPCS", room: "9"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "PPP", room: "9"},
+                    {lecture: "", title: "PPP", room: "9"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "CRLR", room: "9"},
+                    {lecture: "", title: "CRLR", room: "9"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "UACAN", room: "9"},
+                    {lecture: "", title: "ECGD", room: "9"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Assignment Class", room: "9"},
+                    {lecture: "", title: "Assignment Class", room: "9"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "CPCS", room: "9"},
+                    {lecture: "", title: "CPCS", room: "9"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "HCC", room: "9"},
+                    {lecture: "", title: "HCC", room: "9"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "ECGD", room: "9"},
+                    {lecture: "", title: "PPP", room: "9"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "HCC", room: "9"},
+                    {lecture: "", title: "Assignment Class EC1", room: "9"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "CRLR", room: "9"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "UACAN", room: "9"},
+                    {lecture: "", title: "UACAN", room: "9"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Advanced Certificate in Early Learning and Care (Level 6)",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Developing Child", room: "25"},
+                    {lecture: "", title: "Developing Child", room: "25"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Developing Child", room: "25"},
+                    {lecture: "", title: "SSP", room: "25"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Supervision & Admin", room: "9"},
+                    {lecture: "", title: "Supervision & Admin", room: "9"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "SSP", room: "25"},
+                    {lecture: "", title: "SSP", room: "25"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "PPP", room: "25"},
+                    {lecture: "", title: "PPP", room: "25"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Curriculum and Pedagogy", room: "25"},
+                    {lecture: "", title: "Assignment Class", room: "25"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "Supervision & Admin", room: "25"},
+                    {lecture: "", title: "Inclusive ELC", room: "25"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Inclusive ELC", room: "25"},                     
+                    {lecture: "", title: "Assignment Class", room: "25"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Assignment Class", room: "25"},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Inclusive ELC", room: "9"},
+                    {lecture: "", title: "PPP", room: "9"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Curriculum and Pedagogy", room: "9"},
+                    {lecture: "", title: "Curriculum and Pedagogy", room: "9"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
         }
     ]
 }
