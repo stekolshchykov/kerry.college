@@ -41,21 +41,40 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 
 const Home = observer(() => {
-    const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Web Development");
-    const {scheduleStore} = useRootStore();
 
-    // Get the selected course's schedule
+
+    const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Web Development");
+    const [currentDayI, setCurrentDayI] = React.useState<number | null>(null);
+
+    const {scheduleStore} = useRootStore();
     const selectedCourse = scheduleStore.getCourseByTitle(selectedCourseTitle);
+
+    // Получаем текущий день недели
+    const currentDay = new Date().toLocaleDateString("en-US", {weekday: 'long'});
+
+    // Проверка, является ли день сегодняшним
+    const isToday = (day: string) => day === currentDay;
+
+    // Скролл к колонке с сегодняшним днем на мобильных устройствах
+    React.useEffect(() => {
+        const element = document.querySelector(".today-column");
+        if (element) {
+            element.scrollIntoView({behavior: "smooth", block: "nearest", inline: "start"});
+        }
+    }, []);
 
     return (
         <>
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
-                <PageInfoUi title={"Schedule"}
-                            subTitle={
-                                <div>
-                                    In charge of updates: <a href="mailto:o.s.dosenko@gmail.com">Oleksandr Dosenko</a>
-                                </div>
-                            }/>
+                <PageInfoUi
+                    title={"Schedule"}
+                    subTitle={
+                        <div>
+                            {currentDayI}
+                            In charge of updates: <a href="mailto:o.s.dosenko@gmail.com">Oleksandr Dosenko</a>
+                        </div>
+                    }
+                />
             </PageLayout>
 
             <PageLayout isContainer={true} className={"mb-[25px] mt-[50px]"}>
@@ -69,53 +88,63 @@ const Home = observer(() => {
                         />
                         <SelectUI
                             className={"text-white"}
-                            options={scheduleStore.getCourseTitles()} // Use the updated method
-                            onSelect={setSelectedCourseTitle} // Directly set the selected title
+                            options={scheduleStore.getCourseTitles()}
+                            onSelect={setSelectedCourseTitle}
                             label={"Choose a course:"}
                         />
                     </div>
                 </div>
             </PageLayout>
-            <PageLayout isContainer={true}
-                        className={"mb-[50px] max-w-[1280px] m-auto "}>
 
-                {selectedCourse &&
-                    <div
-                        className="col-12  overflow-x-auto mb-[50px] px-0"> {/* Add overflow-x-auto for horizontal scroll */}
-                        {/* Output the schedule as a table */}
-                        <table className={"min-w-full "}>
+            <PageLayout isContainer={true} className={"mb-[50px] max-w-[1280px] m-auto"}>
+                {selectedCourse && (
+                    <div className="col-12 overflow-x-auto mb-[50px] px-0">
+                        <table className={"min-w-full"}>
                             <thead>
                             <tr>
                                 <th className={"border-[1px] p-3 text-[18px] min-w-[120px]"}></th>
-                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Monday</th>
-                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Tuesday</th>
-                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Wednesday</th>
-                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Thursday</th>
-                                <th className={"border-[1px] p-3 text-[18px] min-w-[200px]"}>Friday</th>
+                                {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day, index) => {
+                                    if (isToday(day) && currentDayI !== index) {
+                                        setCurrentDayI(index)
+                                    }
+                                    return <th
+                                        key={index}
+                                        className={`border-[1px] p-3 text-[18px] min-w-[200px] ${isToday(day) ? "bg-yellow-300 today-column" : ""}`}
+                                    >
+                                        {day}
+                                    </th>
+                                })}
                             </tr>
                             </thead>
                             <tbody>
-                            {scheduleStore.data.times?.map((l, k) => {
-                                return (
-                                    <tr key={k} className={k % 2 === 0 ? "bg-gray-50" : ""}>
-                                        <td className={"border-[1px] p-3 w-[120px]"}>{l}</td>
-                                        {selectedCourse?.schedule.map((ll, kk) => {
-                                            return (
-                                                <td key={kk} className={"border-[1px] p-3"}>
-                                                    {!ll[k]?.title && "REST"}
-                                                    <div>{ll[k]?.title}</div>
-                                                    <div>{ll[k]?.lecture}</div>
-                                                    <div>{ll[k]?.room}</div>
-                                                </td>
-                                            );
-                                        })}
-                                    </tr>
-                                );
+                            {scheduleStore.data.times?.map((time, timeIndex) => {
+                                return <tr
+                                    key={timeIndex}
+                                    className={`${timeIndex % 2 === 0 ? "bg-gray-50" : ""}`}
+                                    style={{backgroundColor: scheduleStore.data.times[timeIndex]?.includes("REST") ? 'blue' : ''}}
+                                >
+                                    <td className={"border-[1px] p-3 w-[120px]"}>{time}</td>
+                                    {selectedCourse?.schedule.map((daySchedule, dayIndex) => {
+                                        const isCurrentDay = currentDayI == dayIndex
+                                        return <td
+                                            key={dayIndex}
+                                            className={`border-[1px] p-3 text-left align-top ${isCurrentDay ? "bg-yellow-300" : ""}`}>
+                                            {!daySchedule[timeIndex]?.title ? (
+                                                <div style={{backgroundColor: "blue"}}>REST</div>
+                                            ) : (
+                                                <>
+                                                    <div>{daySchedule[timeIndex]?.title}</div>
+                                                    <div>{daySchedule[timeIndex]?.room}</div>
+                                                </>
+                                            )}
+                                        </td>
+                                    })}
+                                </tr>
                             })}
                             </tbody>
                         </table>
                     </div>
-                }
+                )}
             </PageLayout>
         </>
     );
