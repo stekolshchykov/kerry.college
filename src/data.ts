@@ -245,6 +245,171 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ]
             ]
+        },
+        {
+            title: "Animale Care",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Veterinary Assisting", room: "20"},
+                    {lecture: "", title: "Veterinary Assisting", room: "20"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Veterinary Assisting", room: "20"},
+                    {lecture: "", title: "Animal Behavior", room: "20"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Animal Anatomy & Physiology", room: "20"},
+                    {lecture: "", title: "Animal Welfare", room: "20"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Animal Anatomy & Physiology", room: "8"},
+                    {lecture: "", title: "Animal Anatomy & Physiology", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Animal Welfare", room: "8"},
+                    {lecture: "", title: "Animal Welfare", room: "8"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Environmental sustainability", room: "Term 2"},
+                    {lecture: "", title: "Environmental sustainability", room: "Term 2"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Maths", room: "20"},
+                    {lecture: "", title: "Maths Tutorial", room: "20"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Work Experience", room: "20"},
+                    {lecture: "", title: "Work Experience", room: "20"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Biology", room: "20"},
+                    {lecture: "", title: "Animal Behaviour", room: "20"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "Maths", room: "20"},
+                    {lecture: "", title: "Maths", room: "20"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Communications", room: "20"},
+                    {lecture: "", title: "Animal Behaviour", room: "20"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Assignment Tutorial", room: "8"},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Biology", room: "8"},
+                    {lecture: "", title: "Biology", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Communications", room: "20 / 27"},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Animal Science",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Physics", room: "8"},
+                    {lecture: "", title: "Physics", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Biology", room: "8"},
+                    {lecture: "", title: "Biology", room: "8"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Animal Anatomy & Physiology", room: "8"},
+                    {lecture: "", title: "Maths", room: "8"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Animal Anatomy & Physiology", room: "8"},
+                    {lecture: "", title: "Animal Anatomy & Physiology", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Communications", room: "20"},
+                    {lecture: "", title: "Maths", room: "20"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Environmental sustainability", room: "Term 1"},
+                    {lecture: "", title: "Environmental sustainability", room: "Term 1"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Laboratory Skills", room: "8"},
+                    {lecture: "", title: "Laboratory Skills", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Work Experience", room: "20"},
+                    {lecture: "", title: "Work Experience", room: "20"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "Biology", room: "8"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "Chemistry", room: "8"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Laboratory Skills", room: "8"},
+                    {lecture: "", title: "Maths", room: "8"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Assignment Tutorial", room: "8"},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Physics", room: "20"},
+                    {lecture: "", title: "Chemistry", room: "20"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Chemistry", room: "8"},
+                    {lecture: "", title: "Communications", room: "8 / 28"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Animation (Creative Media)",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Digital Editing", room: "32"},
+                    {lecture: "", title: "Digital Editing", room: "32"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Ditital Editing", room: "32"},
+                    {lecture: "", title: "Animation Drawing Studies", room: "32"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Animation Drawing Studies", room: "32"},
+                    {lecture: "", title: "Animation Drawing Studies", room: "32"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Computing 3D Modelling", room: "32"},
+                    {lecture: "", title: "Computing 3D Modelling", room: "32"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Computing 3D Modelling", room: "32"},
+                    {lecture: "", title: "Teamworking", room: "1"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "PPD", room: "13"},
+                    {lecture: "", title: "PPD", room: "13"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "Drawing", room: "Pathways Building"},
+                    {lecture: "", title: "Drawing", room: "Pathways Building"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Drawing", room: "Pathways Building"},
+                    {lecture: "", title: "Computer Illustrated Graphics", room: "31"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Computer Illustrated Graphics", room: "31"},
+                    {lecture: "", title: "Computer Illustrated Graphics", room: "31"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Teamworking", room: "1"},
+                    {lecture: "", title: "Figure Studies", room: "Pathways Building"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Figure Studies", room: "Pathways Building"},
+                    {lecture: "", title: "Figure Studies", room: "Pathways Building"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
         }
     ]
 }
