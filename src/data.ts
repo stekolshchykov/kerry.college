@@ -140,54 +140,54 @@ const dataCourse: DataI = {
                 title: "Software Development",
     schedule: [
         [ // Понедельник
-            {},
-            {lecture: "Brian O'Shea", title: "Work Experience", room: "1"},
-            {}, // Перемена
-            {lecture: "Dorothy Byrne", title: "Math for IT", room: "25"},
-            {lecture: "Amanda O'Donnell", title: "Communications (Level 5)", room: "25"},
-            {}, // Обеденный перерыв
-            {lecture: "Amanda O'Donnell", title: "Communications (Level 5)", room: "1"},
-            {},
+            {lecture: "", title: "", room: ""},
+            {lecture: "", title: "Work Experience", room: "1"},
+            {lecture: "", title: "BREAK", room: ""},                     // Перемена
+            {lecture: "", title: "Math for IT", room: "25"},
+            {lecture: "", title: "Communications (Level 5)", room: "25"},
+            {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+            {lecture: "", title: "Communications (Level 5)", room: "1"},
+            {lecture: "", title: "", room: ""},
         ],
         [ // Вторник
-            {lecture: "Maria Brosnan", title: "Programming & Design Principles", room: "31"},
-            {lecture: "Maria Brosnan", title: "Programming & Design Principles", room: "31"},
-            {}, // Перемена
-            {lecture: "Maria Brosnan", title: "Programming & Design Principles", room: "31"},
-            {lecture: "Maria Brosnan", title: "Web Authoring", room: "31"},
-            {}, // Обеденный перерыв
-            {lecture: "Maria Brosnan", title: "Web Authoring", room: "31"},
-            {lecture: "Maria Brosnan", title: "Web Authoring", room: "31"},
+            {lecture: "", title: "Programming & Design Principles", room: "31"},
+            {lecture: "", title: "Programming & Design Principles", room: "31"},
+            {lecture: "", title: "BREAK", room: ""},                     // Перемена
+            {lecture: "", title: "Programming & Design Principles", room: "31"},
+            {lecture: "", title: "Web Authoring", room: "31"},
+            {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+            {lecture: "", title: "Web Authoring", room: "31"},
+            {lecture: "", title: "Web Authoring", room: "31"},
         ],
         [ // Среда
-            {lecture: "Brian O'Shea", title: "Fundamentals", room: "31"},
-            {lecture: "Brian O'Shea", title: "Fundamentals", room: "31"},
-            {}, // Перемена
-            {lecture: "Brian O'Shea", title: "Fundamentals", room: "31"},
-            {lecture: "Brian O'Shea", title: "Networking Essentials", room: "31"},
-            {}, // Обеденный перерыв
-            {lecture: "Brian O'Shea", title: "Networking Essentials", room: "31"},
-            {lecture: "Brian O'Shea", title: "Networking Essentials", room: "31"},
+            {lecture: "", title: "Fundamentals", room: "31"},
+            {lecture: "", title: "Fundamentals", room: "31"},
+            {lecture: "", title: "BREAK", room: ""},                     // Перемена
+            {lecture: "", title: "Fundamentals", room: "31"},
+            {lecture: "", title: "Networking Essentials", room: "31"},
+            {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+            {lecture: "", title: "Networking Essentials", room: "31"},
+            {lecture: "", title: "Networking Essentials", room: "31"},
         ],
         [ // Четверг
-            {lecture: "Brian O'Shea", title: "Software Architecture", room: "31"},
-            {lecture: "Brian O'Shea", title: "Software Architecture", room: "31"},
-            {}, // Перемена
-            {lecture: "Brian O'Shea", title: "Software Architecture", room: "31"},
-            {},
-            {}, // Обеденный перерыв
-            {lecture: "Dorothy Byrne", title: "Math for IT", room: "20"},
-            {lecture: "Dorothy Byrne", title: "Math for IT", room: "20"},
+            {lecture: "", title: "Software Architecture", room: "31"},
+            {lecture: "", title: "Software Architecture", room: "31"},
+            {lecture: "", title: "BREAK", room: ""},                     // Перемена
+            {lecture: "", title: "Software Architecture", room: "31"},
+            {lecture: "", title: "", room: ""},
+            {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+            {lecture: "", title: "Math for IT", room: "20"},
+            {lecture: "", title: "Math for IT", room: "20"},
         ],
         [ // Пятница
-            {lecture: "Brian O'Shea", title: "Operating Systems", room: "31"},
-            {lecture: "Brian O'Shea", title: "Operating Systems", room: "31"},
-            {}, // Перемена
-            {lecture: "Brian O'Shea", title: "Operating Systems", room: "31"},
-            {lecture: "Brian O'Shea", title: "Work Experience", room: "31" },
-            {}, // Обеденный перерыв
-            {},
-            {},
+            {lecture: "", title: "Operating Systems", room: "31"},
+            {lecture: "", title: "Operating Systems", room: "31"},
+            {lecture: "", title: "BREAK", room: ""},                     // Перемена
+            {lecture: "", title: "Operating Systems", room: "31"},
+            {lecture: "", title: "Work Experience", room: "31" },
+            {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+            {lecture: "", title: "", room: ""},
+            {lecture: "", title: "", room: ""},
         ]
     ]
 },
