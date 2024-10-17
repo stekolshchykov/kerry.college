@@ -93,7 +93,7 @@ const Home = observer(() => {
                                 const isRestRow = (timeIndex === 2 || timeIndex === 5) ? true : false
                                 return <tr
                                     key={timeIndex}
-                                    className={`${isOddRow ? "bg-gray-50" : ""} ${isRestRow ? "bg-[#8888ff]" : ""}`}
+                                    className={`${isOddRow ? "bg-gray-50" : ""} ${isRestRow ? "bg-[#8888ff]" : ""} text-left align-top`}
                                 >
                                     <td className={"border-[1px] p-3 w-[120px]"}>{time}</td>
                                     {selectedCourse?.schedule.map((daySchedule, dayIndex) => {
