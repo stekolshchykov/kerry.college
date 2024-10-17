@@ -43,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const Home = observer(() => {
 
 
-    const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Web Development");
+    const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Software Development");
     const [currentDayI, setCurrentDayI] = React.useState<number | null>(null);
 
     const {scheduleStore} = useRootStore();
@@ -70,7 +70,6 @@ const Home = observer(() => {
                     title={"Schedule"}
                     subTitle={
                         <div>
-                            {currentDayI}
                             In charge of updates: <a href="mailto:o.s.dosenko@gmail.com">Oleksandr Dosenko</a>
                         </div>
                     }
@@ -109,7 +108,7 @@ const Home = observer(() => {
                                     }
                                     return <th
                                         key={index}
-                                        className={`border-[1px] p-3 text-[18px] min-w-[200px] ${isToday(day) ? "bg-yellow-300 today-column" : ""}`}
+                                        className={`border-[1px] p-3 text-[18px] min-w-[200px] ${isToday(day) ? "bg-yellow-300 today-column" : ""} `}
                                     >
                                         {day}
                                     </th>
@@ -118,19 +117,20 @@ const Home = observer(() => {
                             </thead>
                             <tbody>
                             {scheduleStore.data.times?.map((time, timeIndex) => {
+                                const isOddRow = timeIndex % 2 === 0
+                                const isRestRow = (timeIndex === 2 || timeIndex === 5) ? true : false
                                 return <tr
                                     key={timeIndex}
-                                    className={`${timeIndex % 2 === 0 ? "bg-gray-50" : ""}`}
-                                    style={{backgroundColor: scheduleStore.data.times[timeIndex]?.includes("REST") ? 'blue' : ''}}
+                                    className={`${isOddRow ? "bg-gray-50" : ""} ${isRestRow ? "bg-[#8888ff]" : ""}`}
                                 >
                                     <td className={"border-[1px] p-3 w-[120px]"}>{time}</td>
                                     {selectedCourse?.schedule.map((daySchedule, dayIndex) => {
                                         const isCurrentDay = currentDayI == dayIndex
                                         return <td
                                             key={dayIndex}
-                                            className={`border-[1px] p-3 text-left align-top ${isCurrentDay ? "bg-yellow-300" : ""}`}>
+                                            className={`border-[1px] p-3 text-left align-top ${(isCurrentDay && !isRestRow) ? "bg-yellow-300" : ""}`}>
                                             {!daySchedule[timeIndex]?.title ? (
-                                                <div style={{backgroundColor: "blue"}}>REST</div>
+                                                <div style={{backgroundColor: "blue"}}></div>
                                             ) : (
                                                 <>
                                                     <div>{daySchedule[timeIndex]?.title}</div>
