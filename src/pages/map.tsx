@@ -25,7 +25,7 @@ const Map = () => {
                         className={"text-white"}
                         options={["Clash Road"]}
                         onSelect={e => console.log(e)}
-                        label={"Choose your capsule:"}
+                        label={"Choose your campus:"}
                         initValue={"Clash Road"}
                     />
                 </div>

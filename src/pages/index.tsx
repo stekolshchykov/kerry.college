@@ -56,7 +56,7 @@ const Home = observer(() => {
                             className={"text-white"}
                             options={["Clash Road"]}
                             onSelect={e => console.log(e)}
-                            label={"Choose your capsule:"}
+                            label={"Choose your campus:"}
                             initValue={"Clash Road"}
                         />
                         <SelectUI
