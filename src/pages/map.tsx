@@ -1,4 +1,5 @@
 import PageLayout from "@/layout/page-layout";
+import ContentMaestroUi from "@/ui/content-maestro-ui";
 import PageInfoUi from "@/ui/page-info-ui";
 import SelectUI from "@/ui/select-ui";
 import React from "react";
@@ -30,8 +31,8 @@ const Map = () => {
                 </div>
             </div>
         </PageLayout>
-        
-        <PageLayout isContainer={true} className={"mb-[25px] mt-[50px]"}>
+
+        <PageLayout isContainer={true} className={" mt-[50px]"}>
             <div className="col overflow-x-auto mb-[50px] px-0">
                 <div className={"flex flex-col gap-1"}>
                     <div className={"p-[25px] bg-white border-1"}>
@@ -42,7 +43,6 @@ const Map = () => {
                         />
                     </div>
                     <div className={"p-[25px] bg-white border-1 "}>
-
                         <img
                             src={"./map/ground_floor.png"}
                             alt={"First floor"}
@@ -52,6 +52,8 @@ const Map = () => {
                 </div>
             </div>
         </PageLayout>
+
+        <ContentMaestroUi/>
 
     </>
 
