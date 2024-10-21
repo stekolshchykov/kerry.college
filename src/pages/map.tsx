@@ -18,7 +18,7 @@ const Map = () => {
                 }/>
         </PageLayout>
 
-        <PageLayout isContainer={true} className={"mb-[25px] mt-[50px]"}>
+        <PageLayout isContainer={true} className={"mb-[25px] mt-[25px]"}>
             <div className="col-12 py-[50px] p-0 m-0">
                 <div className={"flex max-md:flex-col gap-3 justify-between bg-black p-[25px] "}>
                     <SelectUI
