@@ -1400,6 +1400,281 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ]
             ]
+        },
+        {
+            title: "Pre Garda Studies",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Criminal Law", room: "23"},
+                    {lecture: "", title: "Criminal Law", room: "23"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Criminology", room: "19"},
+                    {lecture: "", title: "Conflict Resolution", room: "23"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Business Law", room: "23"},
+                    {lecture: "", title: "Business Law", room: "23"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Legal Practice", room: "23"},
+                    {lecture: "", title: "Conflict Resolution", room: "23"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Word Processing", room: "1"},
+                    {lecture: "", title: "Assignment Support", room: "13"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Exercise & Fitness", room: "Complex"},
+                    {lecture: "", title: "Exercise & Fitness", room: "Complex"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Assignment Support", room: "23"},
+                    {lecture: "", title: "Business Law", room: "23"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Criminal Law", room: "23"},
+                    {lecture: "", title: "PPD", room: "23"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Communications", room: "23"},
+                    {lecture: "", title: "Assignment Support", room: "27"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "PPD", room: "23"},            
+                    {lecture: "", title: "Legal Practice", room: "23"},            
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Legal Practice", room: "23"},               
+                    {lecture: "", title: "Conflict Resolution", room: "23"},                  
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Criminology", room: "23"},
+                    {lecture: "", title: "Criminology", room: "23"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "Communications", room: "1"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Word Processing", room: "1"},
+                    {lecture: "", title: "Word Processing", room: "1"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Pre Teaching & Education Studies",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Concepts in Education", room: "29"},
+                    {lecture: "", title: "Concepts in Education", room: "29"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Team Working", room: "1"},
+                    {lecture: "", title: "Team Working", room: "1"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Communications", room: "1"},
+                    {lecture: "", title: "Work Experience", room: "1"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Word Processing", room: "27"},
+                    {lecture: "", title: "Assignment Support", room: "27"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Research & Study Skills", room: ""},    // no room
+                    {lecture: "", title: "Research & Study Skills", room: ""},    // no room
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Interpersonal / Group Behaviour", room: ""},     //no room
+                    {lecture: "", title: "Interpersonal / Group Behaviour", room: ""},     //no room
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Psychology of People", room: ""},        // no room
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "Research & Study Skills", room: ""},    // no room            
+                    {lecture: "", title: "Psychology of People", room: ""},        // no room          
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Communications", room: "25"},               
+                    {lecture: "", title: "Work Experience", room: "27"},                  
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Psychology of People", room: ""},        // no room
+                    {lecture: "", title: "Assignment Support", room: "27"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Word Processing", room: "28"},
+                    {lecture: "", title: "Word Processing", room: "28"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Concepts in Education", room: "28"},
+                    {lecture: "", title: "Interpersonal / Group Behaviour", room: ""},     //no room
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Professional Cookery",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Word Processing / Hotel/Professional Catering", room: "27"},
+                    {lecture: "", title: "Word Processing / Hotel/Professional Catering", room: "27"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Work Practice", room: "27"},
+                    {lecture: "", title: "Work Practice", room: "27"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Personal Effectiveness", room: "27"},
+                    {lecture: "", title: "Personal Effectiveness", room: "27"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Meal Service", room: "22 A/B"},
+                    {lecture: "", title: "Meal Service", room: "22 A/B"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Food Science & Technology", room: "22B"},
+                    {lecture: "", title: "Food Science & Technology", room: "22B"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Culinary Techniques", room: "22 A/B"},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Culinary Techniques", room: "22 A/B"},
+                    {lecture: "", title: "Culinary Techniques", room: "22 A/B"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Culinary Techniques", room: "22 A/B"},
+                    {lecture: "", title: "International Cuisine", room: "22 A/B"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "International Cuisine", room: "22 A/B"},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},            
+                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},            
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},            
+                    {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},                  
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},
+                    {lecture: "", title: "International Cuisine", room: "22 A/B"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Sound and Production",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Sound Engineering", room: "14"},
+                    {lecture: "", title: "Sound Engineering", room: "14"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Industry Studies", room: "14"},
+                    {lecture: "", title: "Music Industry Studies", room: "14"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Event Production", room: "14"},
+                    {lecture: "", title: "Event Production", room: "14"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Music Performance", room: "14"},
+                    {lecture: "", title: "Music Performance", room: "14"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Performance", room: "14"},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Music Techniques", room: "14"},
+                    {lecture: "", title: "Music Techniques", room: "14"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Techniques", room: "14"},
+                    {lecture: "", title: "Audio Engineering", room: "10"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Audio Engineering", room: "10"},
+                    {lecture: "", title: "Audio Engineering", room: "10"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "PPD", room: "19"},            
+                    {lecture: "", title: "PPD", room: "19"},            
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Industry Studies", room: "14"},               
+                    {lecture: "", title: "Team Working", room: "14"},                  
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Team Working", room: "14"},
+                    {lecture: "", title: "Sound Engineering", room: "14"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
+        },
+        {
+            title: "Sports and PE Pre Teaching",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "GAA", room: "Complex"},
+                    {lecture: "", title: "GAA", room: "Complex"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Concepts of Education", room: "29"},
+                    {lecture: "", title: "Concepts of Education", room: "29"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Soccer Coaching", room: "Complex"},
+                    {lecture: "", title: "Soccer Coaching", room: "Complex"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Leisure Facility Operations", room: "Hall"},
+                    {lecture: "", title: "Leisure Facility Operations", room: "Hall"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Assignment Support", room: "23"},
+                    {lecture: "", title: "Assignment Support", room: "23"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Communications", room: "1"},
+                    {lecture: "", title: "Communications", room: "1"},
+                ],
+                [ // Среда
+                    {lecture: "", title: "Soccer Coaching", room: "Hall"},
+                    {lecture: "", title: "Soccer Coaching", room: "Hall"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Sport/Rec Studies", room: "13"},
+                    {lecture: "", title: "Nutrition", room: "13"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Sport/Rec Studies", room: "Hall"},
+                    {lecture: "", title: "Sport/Rec Studies", room: "Hall"},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "Work Experience", room: "26"},            
+                    {lecture: "", title: "Work Experience", room: "26"},            
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Exercise & Fitness", room: "1"},               
+                    {lecture: "", title: "Exercise & Fitness", room: "1"},                  
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Nutrition", room: "26"},
+                    {lecture: "", title: "Nutrition", room: "26"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Basketball Coaching", room: "Complex"},
+                    {lecture: "", title: "Basketball Coaching", room: "Complex"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Concepts of Education", room: "28"},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
         }
     ]
 }
