@@ -56,12 +56,14 @@ const Home = observer(() => {
                             options={["Clash Road"]}
                             onSelect={e => console.log(e)}
                             label={"Choose your capsule:"}
+                            initValue={"Clash Road"}
                         />
                         <SelectUI
                             className={"text-white"}
                             options={scheduleStore.getCourseTitles()}
                             onSelect={setSelectedCourseTitle}
                             label={"Choose a course:"}
+                            initValue={"Software Development"}
                         />
                     </div>
                 </div>
@@ -107,7 +109,8 @@ const Home = observer(() => {
                                             ) : (
                                                 <>
                                                     <div>{daySchedule[timeIndex]?.title}</div>
-                                                    <div>{daySchedule[timeIndex]?.room}</div>
+                                                    {daySchedule[timeIndex]?.room &&
+                                                        <div>R{daySchedule[timeIndex]?.room}</div>}
                                                 </>
                                             )}
                                         </td>

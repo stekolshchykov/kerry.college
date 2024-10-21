@@ -6,9 +6,10 @@ interface SelectUIProps {
     onSelect: (selected: string) => void; // Callback для возврата выбранного значения
     label: string; // Заголовок для select input
     className?: string; // Дополнительные классы для стилизации
+    initValue?: string
 }
 
-const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}) => {
+const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className, initValue}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false); // Состояние для управления открытием/закрытием списка
     const [selectedOption, setSelectedOption] = useState<string>(''); // Состояние для выбранной опции
     const ref = useRef<HTMLDivElement>(null);
@@ -41,6 +42,12 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
         setIsOpen(false)
     }, [selectedOption]);
 
+    useEffect(() => {
+        if (initValue) {
+            setSelectedOption(initValue)
+        }
+    }, [initValue]);
+
     return (
         <div className={`relative w-full ${className}`} ref={ref}>
             {/* Заголовок */}
@@ -54,9 +61,9 @@ const SelectUI: React.FC<SelectUIProps> = ({options, onSelect, label, className}
                 >
                     {/* Отображение выбранной опции или placeholder */}
                     {selectedOption ? (
-                        <span className="text-black">{selectedOption}</span>
+                        <span className="text-black text-ellipsis overflow-hidden">{selectedOption}</span>
                     ) : (
-                        <span className="opacity-40 text-black">Select one</span>
+                        <span className="opacity-40 text-black text-ellipsis overflow-hidden">Select one</span>
                     )}
 
                     {/* Иконка стрелки */}
