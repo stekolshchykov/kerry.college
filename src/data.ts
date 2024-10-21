@@ -1125,6 +1125,61 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ]
             ]
+        },
+        {
+            title: "Music Performance",
+            schedule: [
+                [ // Понедельник
+                    {lecture: "", title: "Sound Engineering", room: "14"},
+                    {lecture: "", title: "Sound Engineering", room: "14"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Industry Studies", room: "14"},
+                    {lecture: "", title: "Music Industry Studies", room: "14"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Event Production", room: "14"},
+                    {lecture: "", title: "Event Production", room: "14"},
+                ],
+                [ // Вторник
+                    {lecture: "", title: "Music Performance", room: "14"},
+                    {lecture: "", title: "Music Performance", room: "14"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Performance", room: "14"},
+                    {lecture: "", title: "Music Theory", room: "14"},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Music Theory", room: "14"},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Среда
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ],
+                [ // Четверг
+                    {lecture: "", title: "PPD", room: "19"},            
+                    {lecture: "", title: "PPD", room: "19"},            
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Industry Studies", room: "14"},               
+                    {lecture: "", title: "Team Working", room: "14"},                  
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "Team Working", room: "14"},
+                    {lecture: "", title: "Sound Engineering", room: "14"},
+                ],
+                [ // Пятница
+                    {lecture: "", title: "Music Theory", room: "14"},
+                    {lecture: "", title: "Music Theory", room: "14"},
+                    {lecture: "", title: "BREAK", room: ""},                     // Перемена
+                    {lecture: "", title: "Music Theory", room: "14"},
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "", room: ""},
+                ]
+            ]
         }
     ]
 }
