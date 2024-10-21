@@ -20,7 +20,7 @@ const ContentMaestroUi = () => {
                     </div>
                     <div className={"text-white text-m flex flex-col gap-2 "}>
                         <div className={"leading-[1]"}>
-                            Welcome to our student space at Kerry College in Tralee, Ireland. Whether you're new or
+                            Welcome to our student space at Kerry College in Tralee, Ireland. Whether you’re new or
                             a seasoned student, this site is your hub for student life. We’ve gathered everything you
                             need, from events and news to study resources and tips.
                         </div>
