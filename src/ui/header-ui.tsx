@@ -12,7 +12,7 @@ const HeaderUi = () => {
         {title: "Home", link: "/home", isActive: path === "/home", isComingSoon: true},
         {title: "News", link: "/news", isActive: path === "/news", isComingSoon: true},
         {title: "Schedule", link: "/", isActive: path === "/", isComingSoon: false},
-        {title: "Holiday", link: "/holiday", isActive: path === "/holiday", isComingSoon: true},
+        {title: "Holiday", link: "/holiday", isActive: path === "/holiday", isComingSoon: false},
         {title: "Map", link: "/map", isActive: path === "/map", isComingSoon: false},
         {title: "Staff", link: "/staff", isActive: path === "/staff", isComingSoon: true},
         {title: "Ideas", link: "/ideas", isActive: path === "/ideas", isComingSoon: true},

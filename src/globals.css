@@ -40,29 +40,41 @@ body {
     }
 }
 
-/*holiday*/
+/*react-calendar*/
 
-.react-calendar .holiday {
+/*.react-calendar {*/
+/*    width: 100% !important; !* Ширина 100% от родителя *!*/
+/*    height: 100% !important; !* Высота 100% от родителя *!*/
+/*}*/
+
+.react-calendar .react-calendar__tile--now {
+    background: transparent;
+    border: 1px solid #0B2336;
+    color: #0B2336;
+}
+
+.react-calendar .holiday, .holiday {
     background: #00c400;
     color: white;
 }
 
-.react-calendar .christmas {
+.react-calendar .christmas, .christmas {
     background: #8003ae;
     color: white;
 }
 
-.react-calendar .mid-terms {
+.react-calendar .mid-terms, .mid-terms {
     background: #0367ae;
     color: white;
 }
 
-.react-calendar .eater-break {
+.react-calendar .eater-break, .eater-break {
     background: #c8969e;
     color: white;
 }
 
 .react-calendar .working-day {
+    color: #0B2336;
     /*background: #ff8989; !* Цвет для рабочих дней *!*/
     /*color: white; !* Цвет текста для рабочих дней *!*/
 }

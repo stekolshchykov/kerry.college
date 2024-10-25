@@ -67,15 +67,43 @@ const Holiday: React.FC = () => {
 
             <PageLayout isContainer={true} className={" mt-[50px] mb-[50px]"}>
                 <div className="col">
-                    {isClient && ( // Убедитесь, что компонент рендерится только на клиенте
-                        <Calendar
-                            onChange={setValue} // Обновляем состояние с типами
-                            value={value}
-                            tileClassName={tileClassName}
-                            // Убираем отображение заголовка
-                            formatMonthYear={formatMonthYear} // Передаем функцию с правильными параметрами
-                        />
-                    )}
+                    <div className={"flex max-md:flex-col max-md:gap-3 gap-5"}>
+                        <div className={""}>
+                            {isClient && ( // Убедитесь, что компонент рендерится только на клиенте
+                                <Calendar
+                                    className={"min-w-[600px] max-w-[100%]}"}
+                                    onChange={setValue} // Обновляем состояние с типами
+                                    value={value}
+                                    tileClassName={tileClassName}
+                                    // Убираем отображение заголовка
+                                    formatMonthYear={formatMonthYear} // Передаем функцию с правильными параметрами
+                                />
+                            )}
+                        </div>
+                        <div className={"flex flex-col gap-1"}>
+                            <div className={"flex gap-3 align-items-center"}>
+                                <div className={"w-[35px] h-[35px] holiday"}></div>
+                                <div>Back holiday</div>
+                            </div>
+
+                            <div className={"flex gap-3 align-items-center"}>
+                                <div className={"w-[35px] h-[35px] christmas"}></div>
+                                <div>Christmas</div>
+                            </div>
+
+                            <div className={"flex gap-3 align-items-center"}>
+                                <div className={"w-[35px] h-[35px] mid-terms"}></div>
+                                <div>Mid-Terms</div>
+                            </div>
+
+                            <div className={"flex gap-3 align-items-center"}>
+                                <div className={"w-[35px] h-[35px] eater-break"}></div>
+                                <div>Eater Break</div>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
             </PageLayout>
         </>
