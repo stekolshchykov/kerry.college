@@ -43,7 +43,8 @@ const Home = observer(() => {
                     title={"Schedule"}
                     subTitle={
                         <div>
-                            In charge of updates: <a href="mailto:o.s.dosenko@gmail.com">Oleksandr Dosenko</a>
+                            If you notice outdated or missing information, please send updates to one of our staff
+                            members, or ask your teacher to assist.
                         </div>
                     }
                 />
