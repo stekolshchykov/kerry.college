@@ -13,8 +13,8 @@ const Map = () => {
                 title={"Map"}
                 subTitle={
                     <div>
-                        If you notice outdated or missing information, please send updates to one of our staff members,
-                        or ask your teacher to assist.
+                        Explore the campus maps, providing detailed layouts and locations for all facilities across our
+                        campuses.
                     </div>
                 }/>
         </PageLayout>

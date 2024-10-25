@@ -1,5 +1,6 @@
 import {markedDates} from "@/data";
 import PageLayout from "@/layout/page-layout";
+import ContentMaestroUi from "@/ui/content-maestro-ui";
 import PageInfoUi from "@/ui/page-info-ui";
 import React, {useEffect, useState} from 'react';
 import Calendar from 'react-calendar';
@@ -58,9 +59,7 @@ const Holiday: React.FC = () => {
                     title={"Holiday"}
                     subTitle={
                         <div>
-                            If you notice outdated or missing information, please send updates to one of our staff
-                            members,
-                            or ask your teacher to assist.
+                            View our Holiday Calendar for information on working days and weekends throughout the year.
                         </div>
                     }/>
             </PageLayout>
@@ -106,6 +105,9 @@ const Holiday: React.FC = () => {
                     </div>
                 </div>
             </PageLayout>
+
+            <ContentMaestroUi/>
+            
         </>
     );
 }

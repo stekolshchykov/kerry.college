@@ -43,8 +43,8 @@ const Home = observer(() => {
                     title={"Schedule"}
                     subTitle={
                         <div>
-                            If you notice outdated or missing information, please send updates to one of our staff
-                            members, or ask your teacher to assist.
+                            Access the class schedule for all campuses and courses, providing essential details on
+                            timings and locations.
                         </div>
                     }
                 />

@@ -42,10 +42,23 @@ body {
 
 /*react-calendar*/
 
-/*.react-calendar {*/
-/*    width: 100% !important; !* Ширина 100% от родителя *!*/
-/*    height: 100% !important; !* Высота 100% от родителя *!*/
-/*}*/
+.react-calendar__navigation button {
+    font-size: 1.4rem; /* Увеличьте размер текста кнопок */
+    height: 50px; /* Высота кнопки */
+    width: 50px; /* Ширина кнопки */
+}
+
+/* Увеличьте размер иконок */
+.react-calendar__navigation svg {
+    width: 22px; /* Увеличьте ширину иконок */
+    height: 22px; /* Увеличьте высоту иконок */
+}
+
+/* Пример изменения размера ячеек календаря */
+.react-calendar__month-view__days__day {
+    /*font-size: 1.1rem; !* Увеличьте размер текста в ячейках *!*/
+}
+
 
 .react-calendar .react-calendar__tile--now {
     background: transparent;
