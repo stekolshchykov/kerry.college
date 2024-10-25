@@ -14,7 +14,7 @@ const HeaderUi = () => {
         {title: "Schedule", link: "/", isActive: path === "/", isComingSoon: false},
         {title: "Holiday", link: "/holiday", isActive: path === "/holiday", isComingSoon: false},
         {title: "Map", link: "/map", isActive: path === "/map", isComingSoon: false},
-        {title: "Staff", link: "/staff", isActive: path === "/staff", isComingSoon: true},
+        {title: "Staff", link: "/staff", isActive: path === "/staff", isComingSoon: false},
         {title: "Ideas", link: "/ideas", isActive: path === "/ideas", isComingSoon: true},
         {title: "Articles", link: "/articles", isActive: path === "/articles", isComingSoon: true},
         {title: "Forum", link: "/forum", isActive: path === "/forum", isComingSoon: true},
