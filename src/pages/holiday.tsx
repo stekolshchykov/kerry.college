@@ -55,7 +55,7 @@ const Holiday: React.FC = () => {
         <>
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
                 <PageInfoUi
-                    title={"Map"}
+                    title={"Holiday"}
                     subTitle={
                         <div>
                             If you notice outdated or missing information, please send updates to one of our staff
