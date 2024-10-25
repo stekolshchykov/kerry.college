@@ -11,14 +11,18 @@ const HeaderUi = () => {
         title: string
         link: string
         isActive: boolean
+        isComingSoon: boolean
     }[] = [
-        // {title: "Home", link: "/", isActive: path === "/test"},
-        {title: "Schedule", link: "/", isActive: path === "/"},
-        {title: "Map", link: "/map", isActive: path === "/map"},
-        // {title: "Campus map", link: "/", isActive: path === "/test"},
-        {title: "Staff", link: "/staff", isActive: path === "/staff"},
-        // {title: "News", link: "/", isActive: path === "/test"},
-        // {title: "Ideas", link: "/", isActive: path === "/test"},
+        {title: "Home", link: "/home", isActive: path === "/home", isComingSoon: true},
+        {title: "News", link: "/news", isActive: path === "/news", isComingSoon: true},
+        {title: "Schedule", link: "/", isActive: path === "/", isComingSoon: false},
+        {title: "Holiday", link: "/holiday", isActive: path === "/holiday", isComingSoon: true},
+        {title: "Map", link: "/map", isActive: path === "/map", isComingSoon: false},
+        {title: "Staff", link: "/staff", isActive: path === "/staff", isComingSoon: true},
+        {title: "Ideas", link: "/ideas", isActive: path === "/ideas", isComingSoon: true},
+        {title: "Articles", link: "/articles", isActive: path === "/articles", isComingSoon: true},
+        {title: "Forum", link: "/forum", isActive: path === "/forum", isComingSoon: true},
+        {title: "Contact", link: "/contact", isActive: path === "/contact", isComingSoon: true},
     ]
 
     return <div>
@@ -33,7 +37,7 @@ const HeaderUi = () => {
                                     <ul className={"gap-4 hidden lg:flex"}>
                                         {links.map((l, k) =>
                                             <li key={k}
-                                                className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer`}>
+                                                className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer ${l.isComingSoon && "opacity-40"}`}>
                                                 <Link href={l.link}>
                                                     {l.title}
                                                 </Link>
