@@ -71,7 +71,7 @@ const Holiday: React.FC = () => {
                         <div className={""}>
                             {isClient && ( // Убедитесь, что компонент рендерится только на клиенте
                                 <Calendar
-                                    className={"min-w-[600px] max-w-[100%]}"}
+                                    className={"max-w-[100vw] min-w-full md:min-w-[600px] }"}
                                     onChange={setValue} // Обновляем состояние с типами
                                     value={value}
                                     tileClassName={tileClassName}
