@@ -16,7 +16,7 @@ const HeaderUi = () => {
         {title: "Schedule", link: "/", isActive: path === "/"},
         {title: "Map", link: "/map", isActive: path === "/map"},
         // {title: "Campus map", link: "/", isActive: path === "/test"},
-        // {title: "Staff", link: "/staff", isActive: path === "/staff"},
+        {title: "Staff", link: "/staff", isActive: path === "/staff"},
         // {title: "News", link: "/", isActive: path === "/test"},
         // {title: "Ideas", link: "/", isActive: path === "/test"},
     ]
