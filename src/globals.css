@@ -40,3 +40,29 @@ body {
     }
 }
 
+/*holiday*/
+
+.react-calendar .holiday {
+    background: #00c400;
+    color: white;
+}
+
+.react-calendar .christmas {
+    background: #8003ae;
+    color: white;
+}
+
+.react-calendar .mid-terms {
+    background: #0367ae;
+    color: white;
+}
+
+.react-calendar .eater-break {
+    background: #c8969e;
+    color: white;
+}
+
+.react-calendar .working-day {
+    /*background: #ff8989; !* Цвет для рабочих дней *!*/
+    /*color: white; !* Цвет текста для рабочих дней *!*/
+}

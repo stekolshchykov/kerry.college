@@ -558,7 +558,7 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Supervision & Admin", room: "25"},
                     {lecture: "", title: "Inclusive ELC", room: "25"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Inclusive ELC", room: "25"},                     
+                    {lecture: "", title: "Inclusive ELC", room: "25"},
                     {lecture: "", title: "Assignment Class", room: "25"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Assignment Class", room: "25"},
@@ -669,7 +669,7 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Design", room: ""},            //no room
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
                     {lecture: "", title: "Design", room: ""},            //no room
-                    {lecture: "", title: "Print Making", room: "33"},                  
+                    {lecture: "", title: "Print Making", room: "33"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Print Making", room: "33"},
                     {lecture: "", title: "Print Making", room: "33"},
@@ -720,11 +720,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Applied Economics", room: "28"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Communications", room: "28"},            
-                    {lecture: "", title: "Communications", room: "28"},            
+                    {lecture: "", title: "Communications", room: "28"},
+                    {lecture: "", title: "Communications", room: "28"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Work Experience", room: "28"},            
-                    {lecture: "", title: "Work Experience", room: "28"},                  
+                    {lecture: "", title: "Work Experience", room: "28"},
+                    {lecture: "", title: "Work Experience", room: "28"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Accounting M&C", room: "28"},
                     {lecture: "", title: "Marketing Practice", room: "28"},
@@ -775,11 +775,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Business Law", room: "29"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Spreadsheets", room: "29"},            
-                    {lecture: "", title: "Work Experience", room: "29"},            
+                    {lecture: "", title: "Spreadsheets", room: "29"},
+                    {lecture: "", title: "Work Experience", room: "29"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Maths", room: "29"},            
-                    {lecture: "", title: "Accounting M&C", room: "29"},                  
+                    {lecture: "", title: "Maths", room: "29"},
+                    {lecture: "", title: "Accounting M&C", room: "29"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Business Law", room: "13"},
                     {lecture: "", title: "Business Law", room: "13"},
@@ -830,11 +830,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "CAD", room: "19"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Building Construction", room: "17"},            
-                    {lecture: "", title: "Building Construction", room: "17"},            
+                    {lecture: "", title: "Building Construction", room: "17"},
+                    {lecture: "", title: "Building Construction", room: "17"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Building Construction", room: "17"},            
-                    {lecture: "", title: "Wood Fabrication", room: "17"},                  
+                    {lecture: "", title: "Building Construction", room: "17"},
+                    {lecture: "", title: "Wood Fabrication", room: "17"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Architectural Drawing", room: "17"},
                     {lecture: "", title: "Work Experience", room: "25"},
@@ -965,11 +965,11 @@ const dataCourse: DataI = {
             title: "Engineering and Electronic Technology",
             schedule: [
                 [ // Понедельник
-                    {lecture: "", title: "", room: ""},            
-                    {lecture: "", title: "Electronics", room: "19"},            
+                    {lecture: "", title: "", room: ""},
+                    {lecture: "", title: "Electronics", room: "19"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Electronics", room: "19"},           
-                    {lecture: "", title: "Electronics", room: "19"},            
+                    {lecture: "", title: "Electronics", room: "19"},
+                    {lecture: "", title: "Electronics", room: "19"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Maths", room: "19"},
                     {lecture: "", title: "Communications", room: "19"},
@@ -995,11 +995,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "CAD", room: "19"},            
-                    {lecture: "", title: "CAD", room: "19"},            
+                    {lecture: "", title: "CAD", room: "19"},
+                    {lecture: "", title: "CAD", room: "19"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "CAD", room: "19"},            
-                    {lecture: "", title: "Engeneering Workshop Process", room: "19"},                  
+                    {lecture: "", title: "CAD", room: "19"},
+                    {lecture: "", title: "Engeneering Workshop Process", room: "19"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Engeneering Workshop Process", room: "19"},
                     {lecture: "", title: "Engeneering Workshop Process", room: "19"},
@@ -1050,11 +1050,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},            
-                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},            
+                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},
+                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Food Preparation", room: "22B"},            
-                    {lecture: "", title: "Food Preparation", room: "22B"},                  
+                    {lecture: "", title: "Food Preparation", room: "22B"},
+                    {lecture: "", title: "Food Preparation", room: "22B"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Accommodation Techniques", room: "22B"},
                     {lecture: "", title: "Accommodation Techniques", room: "22B"},
@@ -1105,11 +1105,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "PPD", room: "26"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Communications", room: "1"},            
-                    {lecture: "", title: "Communications", room: "1"},            
+                    {lecture: "", title: "Communications", room: "1"},
+                    {lecture: "", title: "Communications", room: "1"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Assignment Class Law", room: "26"},               
-                    {lecture: "", title: "Employment Law", room: "26"},                  
+                    {lecture: "", title: "Assignment Class Law", room: "26"},
+                    {lecture: "", title: "Employment Law", room: "26"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Word Processing", room: "1"},
                     {lecture: "", title: "Word Processing", room: "1"},
@@ -1160,11 +1160,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "PPD", room: "19"},            
-                    {lecture: "", title: "PPD", room: "19"},            
+                    {lecture: "", title: "PPD", room: "19"},
+                    {lecture: "", title: "PPD", room: "19"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Music Industry Studies", room: "14"},               
-                    {lecture: "", title: "Team Working", room: "14"},                  
+                    {lecture: "", title: "Music Industry Studies", room: "14"},
+                    {lecture: "", title: "Team Working", room: "14"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Team Working", room: "14"},
                     {lecture: "", title: "Sound Engineering", room: "14"},
@@ -1215,11 +1215,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Text Production", room: "30"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Bookkeeping", room: "30"},            
-                    {lecture: "", title: "Bookkeeping", room: "30"},            
+                    {lecture: "", title: "Bookkeeping", room: "30"},
+                    {lecture: "", title: "Bookkeeping", room: "30"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Audio Transcription", room: "30"},               
-                    {lecture: "", title: "Audio Transcription", room: "30"},                  
+                    {lecture: "", title: "Audio Transcription", room: "30"},
+                    {lecture: "", title: "Audio Transcription", room: "30"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Word Processing", room: "30"},
                     {lecture: "", title: "Info & Admin", room: "30"},
@@ -1270,11 +1270,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Customer Service", room: "12"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Word Processing", room: "12"},            
-                    {lecture: "", title: "Word Processing", room: "12"},            
+                    {lecture: "", title: "Word Processing", room: "12"},
+                    {lecture: "", title: "Word Processing", room: "12"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Payroll", room: "12"},               
-                    {lecture: "", title: "Assignment Support", room: "12"},                  
+                    {lecture: "", title: "Payroll", room: "12"},
+                    {lecture: "", title: "Assignment Support", room: "12"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Assignment Support", room: "12"},
                     {lecture: "", title: "Work Experience", room: "12"},
@@ -1325,11 +1325,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Leisure Facility", room: "Gym / 1"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Communications", room: "13"},            
-                    {lecture: "", title: "Communications", room: "13"},            
+                    {lecture: "", title: "Communications", room: "13"},
+                    {lecture: "", title: "Communications", room: "13"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "ITEC Strength & Conditioning", room: "Gym / 13"},               
-                    {lecture: "", title: "ITEC Strength & Conditioning", room: "Gym / 29"},                  
+                    {lecture: "", title: "ITEC Strength & Conditioning", room: "Gym / 13"},
+                    {lecture: "", title: "ITEC Strength & Conditioning", room: "Gym / 29"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Sport Anatomy & Physiology", room: "29"},
                     {lecture: "", title: "Sport Anatomy & Physiology", room: "29"},
@@ -1380,11 +1380,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Anatomy & Physiology", room: "21"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Physiotherapy Assistant Theory", room: "21"},            
-                    {lecture: "", title: "Physiotherapy Assistant Theory", room: "21"},            
+                    {lecture: "", title: "Physiotherapy Assistant Theory", room: "21"},
+                    {lecture: "", title: "Physiotherapy Assistant Theory", room: "21"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Physiotherapy Assistant Theory", room: "21"},               
-                    {lecture: "", title: "Physiotherapy Assistant Practice", room: "21"},                  
+                    {lecture: "", title: "Physiotherapy Assistant Theory", room: "21"},
+                    {lecture: "", title: "Physiotherapy Assistant Practice", room: "21"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Physiotherapy Assistant Practice", room: "21"},
                     {lecture: "", title: "Physiotherapy Assistant Practice", room: "21"},
@@ -1435,11 +1435,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Assignment Support", room: "27"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "PPD", room: "23"},            
-                    {lecture: "", title: "Legal Practice", room: "23"},            
+                    {lecture: "", title: "PPD", room: "23"},
+                    {lecture: "", title: "Legal Practice", room: "23"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Legal Practice", room: "23"},               
-                    {lecture: "", title: "Conflict Resolution", room: "23"},                  
+                    {lecture: "", title: "Legal Practice", room: "23"},
+                    {lecture: "", title: "Conflict Resolution", room: "23"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Criminology", room: "23"},
                     {lecture: "", title: "Criminology", room: "23"},
@@ -1493,8 +1493,8 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Research & Study Skills", room: ""},    // no room            
                     {lecture: "", title: "Psychology of People", room: ""},        // no room          
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Communications", room: "25"},               
-                    {lecture: "", title: "Work Experience", room: "27"},                  
+                    {lecture: "", title: "Communications", room: "25"},
+                    {lecture: "", title: "Work Experience", room: "27"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Psychology of People", room: ""},        // no room
                     {lecture: "", title: "Assignment Support", room: "27"},
@@ -1545,11 +1545,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "", room: ""},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},            
-                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},            
+                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},
+                    {lecture: "", title: "Meal Planning / Applied Nutrition", room: "22B"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},            
-                    {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},                  
+                    {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},
+                    {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Pastry Baking & Desserts", room: "22B"},
                     {lecture: "", title: "International Cuisine", room: "22 A/B"},
@@ -1600,11 +1600,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Audio Engineering", room: "10"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "PPD", room: "19"},            
-                    {lecture: "", title: "PPD", room: "19"},            
+                    {lecture: "", title: "PPD", room: "19"},
+                    {lecture: "", title: "PPD", room: "19"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Music Industry Studies", room: "14"},               
-                    {lecture: "", title: "Team Working", room: "14"},                  
+                    {lecture: "", title: "Music Industry Studies", room: "14"},
+                    {lecture: "", title: "Team Working", room: "14"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Team Working", room: "14"},
                     {lecture: "", title: "Sound Engineering", room: "14"},
@@ -1655,11 +1655,11 @@ const dataCourse: DataI = {
                     {lecture: "", title: "Sport/Rec Studies", room: "Hall"},
                 ],
                 [ // Четверг
-                    {lecture: "", title: "Work Experience", room: "26"},            
-                    {lecture: "", title: "Work Experience", room: "26"},            
+                    {lecture: "", title: "Work Experience", room: "26"},
+                    {lecture: "", title: "Work Experience", room: "26"},
                     {lecture: "", title: "BREAK", room: ""},                     // Перемена
-                    {lecture: "", title: "Exercise & Fitness", room: "1"},               
-                    {lecture: "", title: "Exercise & Fitness", room: "1"},                  
+                    {lecture: "", title: "Exercise & Fitness", room: "1"},
+                    {lecture: "", title: "Exercise & Fitness", room: "1"},
                     {lecture: "", title: "LUNCH BREAK", room: ""},               // Обеденный перерыв
                     {lecture: "", title: "Nutrition", room: "26"},
                     {lecture: "", title: "Nutrition", room: "26"},
@@ -1679,4 +1679,19 @@ const dataCourse: DataI = {
     ]
 }
 
-export {dataCourse, dataStaff};
+//
+
+// Определение интерфейса для отмеченных дат
+interface MarkedDatesI {
+    [key: string]: "holiday" | "christmas" | "mid-terms" | "eater-break"; // ключ - строка (дата в формате "YYYY-MM-DD"), значение - строка (класс)
+}
+
+const markedDates: MarkedDatesI = {
+    '2024-10-01': 'holiday',   // Праздник
+    '2024-10-02': 'christmas',  // Рождество
+    '2024-10-03': 'mid-terms',  // Середина семестра
+    '2024-10-04': 'eater-break', // Пасхальные каникулы
+};
+
+
+export {dataCourse, dataStaff, markedDates};
