@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.quote {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*.font-b {*/
+/*  font-weight: 700 !important;*/
+/*}*/
+
+/*.font-l {*/
+/*  font-weight: 300 !important;*/
+/*}*/
+
+
+body {
+    background: #F1F5FC;
+
+}
+
+:root {
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+
+    }
+}
+
+/*react-calendar*/
+
+.react-calendar__navigation button {
+    font-size: 1.4rem; /* Увеличьте размер текста кнопок */
+    height: 50px; /* Высота кнопки */
+    width: 50px; /* Ширина кнопки */
+}
+
+/* Увеличьте размер иконок */
+.react-calendar__navigation svg {
+    width: 22px; /* Увеличьте ширину иконок */
+    height: 22px; /* Увеличьте высоту иконок */
+}
+
+/* Пример изменения размера ячеек календаря */
+.react-calendar__month-view__days__day {
+    /*font-size: 1.1rem; !* Увеличьте размер текста в ячейках *!*/
+}
+
+
+.react-calendar .react-calendar__tile--now {
+    background: transparent;
+    border: 1px solid #0B2336;
+    color: #0B2336;
+}
+
+.react-calendar .holiday, .holiday {
+    background: #00c400;
+    color: white;
+}
+
+.react-calendar .christmas, .christmas {
+    background: #8003ae;
+    color: white;
+}
+
+.react-calendar .mid-terms, .mid-terms {
+    background: #0367ae;
+    color: white;
+}
+
+.react-calendar .eater-break, .eater-break {
+    background: #c8969e;
+    color: white;
+}
+
+.react-calendar .working-day {
+    color: #0B2336;
+    /*background: #ff8989; !* Цвет для рабочих дней *!*/
+    /*color: white; !* Цвет текста для рабочих дней *!*/
+}
