@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'sites/backend/**'
+      - 'backend/**'
 
 jobs:
   build-and-push:
