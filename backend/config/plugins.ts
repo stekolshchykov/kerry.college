@@ -12,13 +12,13 @@ module.exports = ({env}) => ({
         config: {
             provider: 'strapi-provider-upload-minio-ce',
             providerOptions: {
-                accessKey: "FwmBN1auqcVmrg77r5OM",
-                secretKey: "zJ9ykLhP7e0LKMOotvpj2yEKSQzrTNVh1KNzvN4I",
-                bucket: "kerry-college",
-                endPoint: "185.237.204.37",
-                useSSL: false,
-                port: 9000,
-                host: "185.237.204.37", // уберите :9002
+                accessKey: env('MINIO_ACCESS_KEY'),
+                secretKey: env('MINIO_SECRET_KEY'),
+                bucket: env('MINIO_BUCKET'),
+                endPoint: env('MINIO_PORT'),
+                useSSL:env('MINIO_USE_SSL'),
+                port: env('MINIO_ACCESS_KEY'),
+                host: env('MINIO_HOST')
             },
         },
     },
