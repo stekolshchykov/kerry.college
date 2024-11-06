@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
+    description: '';
     displayName: 'Article';
     pluralName: 'articles';
     singularName: 'article';
@@ -380,6 +381,10 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    authors: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -391,6 +396,36 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNewsNews extends Struct.CollectionTypeSchema {
+  collectionName: 'newses';
+  info: {
+    displayName: 'News';
+    pluralName: 'newses';
+    singularName: 'news';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Authors: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::news.news'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -849,9 +884,13 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
+    articles: Schema.Attribute.Relation<'manyToMany', 'api::article.article'>;
+    avatar: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -863,12 +902,17 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    isAuthor: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isStudent: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isTeacher: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isVolunteer: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.user'
     > &
       Schema.Attribute.Private;
+    news: Schema.Attribute.Relation<'manyToMany', 'api::news.news'>;
     password: Schema.Attribute.Password &
       Schema.Attribute.Private &
       Schema.Attribute.SetMinMaxLength<{
@@ -904,6 +948,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
+      'api::news.news': ApiNewsNews;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

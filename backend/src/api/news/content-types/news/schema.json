@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "newses",
   "info": {
-    "singularName": "article",
-    "pluralName": "articles",
-    "displayName": "Article",
-    "description": ""
+    "singularName": "news",
+    "pluralName": "newses",
+    "displayName": "News"
   },
   "options": {
     "draftAndPublish": true
@@ -16,13 +15,13 @@
       "type": "string"
     },
     "text": {
-      "type": "richtext"
+      "type": "blocks"
     },
-    "authors": {
+    "Authors": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "articles"
+      "inversedBy": "news"
     }
   }
 }
