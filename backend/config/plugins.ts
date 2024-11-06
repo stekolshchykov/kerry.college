@@ -1,13 +1,4 @@
-module.exports = ({env}) => ({
-    pagination: {
-        pageSize: 1000,
-        limit: 1000,
-    },
-    rest: {
-        maxLimit: 1000,
-        pageSize: 1000,
-        limit: 1000,
-    },
+module.exports = ({ env }) => ({
     upload: {
         config: {
             provider: 'strapi-provider-upload-minio-ce',
@@ -15,9 +6,9 @@ module.exports = ({env}) => ({
                 accessKey: env('MINIO_ACCESS_KEY'),
                 secretKey: env('MINIO_SECRET_KEY'),
                 bucket: env('MINIO_BUCKET'),
-                endPoint: env('MINIO_PORT'),
-                useSSL:env('MINIO_USE_SSL'),
-                port: env('MINIO_ACCESS_KEY'),
+                endPoint: env('MINIO_ENDPOINT'), // Замените MINIO_PORT на MINIO_ENDPOINT
+                useSSL: env.bool('MINIO_USE_SSL', false),
+                port: parseInt(env('MINIO_PORT'), 10),
                 host: env('MINIO_HOST')
             },
         },
