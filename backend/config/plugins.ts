@@ -1,7 +1,7 @@
 module.exports = ({env}) => ({
     pagination: {
         pageSize: 1000,
-        limit: 1000, // Установка лимита в 1000 записей
+        limit: 1000,
     },
     rest: {
         maxLimit: 1000,
