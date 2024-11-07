@@ -23,6 +23,15 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "articles"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
