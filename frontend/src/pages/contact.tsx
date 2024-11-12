@@ -39,13 +39,19 @@ const Contact = () => {
             <div className="col">
                 <div className={"flex max-md:flex-col max-md:gap-3 gap-5"}>
                     <ul className={"flex gap-3"}>
-                        {users.map((e) => <li key={e.id}>
+                        {users.map((e) => <li key={e.id} className={"flex flex-col gap-1"}>
                             <img src={e.avatar ? e.avatar[0]?.url : ""} alt="avatar" className={"w-[180px]"}/>
-                            {e.name} {e.lastName}
-                            {e.isVolunteer && <span>Volunteer</span>}
-                            {e.isAuthor && <span>Author</span>}
-                            {e.isTeacher && <span>Teacher</span>}
-                            {e.isStudent && <span>Student</span>}
+                            <div className={"text-m font-b leading-1"}>{e.name} {e.lastName}</div>
+                            <div className={"text-s leading-[0.2]"}>
+                                {[
+                                    e.isVolunteer && "Volunteer",
+                                    e.isAuthor && "Author",
+                                    e.isTeacher && "Teacher",
+                                    e.isStudent && "Student",
+                                ]
+                                    .filter(Boolean)
+                                    .join(", ")}
+                            </div>
                         </li>)}
                     </ul>
                 </div>
