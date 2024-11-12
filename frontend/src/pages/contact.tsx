@@ -23,7 +23,6 @@ const Contact = () => {
         getMembers()
     }, [])
 
-
     return <>
 
         <PageLayout isContainer={true} className={"bg-mina text-white"}>
@@ -61,5 +60,6 @@ const Contact = () => {
     </>
 
 }
+
 
 export default Contact;

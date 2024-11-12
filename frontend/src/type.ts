@@ -17,7 +17,7 @@ export interface UserI {
     isAuthor: boolean;
     avatar: AvatarI[];
     articles: ArticleI[];
-    news: NewsItemI[];
+    news: any[];
 }
 
 export interface AvatarI {
@@ -67,7 +67,4 @@ export interface ArticleI {
     createdAt: string;
     updatedAt: string;
     publishedAt: string | null;
-}
-
-export interface NewsItemI {
 }
