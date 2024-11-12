@@ -909,12 +909,14 @@ export interface PluginUsersPermissionsUser
     isStudent: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     isTeacher: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     isVolunteer: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    lastName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.user'
     > &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     news: Schema.Attribute.Relation<'manyToMany', 'api::news.news'>;
     password: Schema.Attribute.Password &
       Schema.Attribute.Private &

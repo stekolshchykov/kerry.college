@@ -1,0 +1,19 @@
+{
+  "name": "kerry.college",
+  "version": "1.0.0",
+  "scripts": {
+    "backend:dev": "yarn --cwd backend develop",
+    "frontend:dev": "yarn --cwd frontend dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stekolshchykov/kerry.college"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stekolshchykov/kerry.college/issues"
+  },
+  "homepage": "https://github.com/stekolshchykov/kerry.college#readme"
+}

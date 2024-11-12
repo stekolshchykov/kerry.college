@@ -103,6 +103,12 @@
       "relation": "manyToMany",
       "target": "api::news.news",
       "mappedBy": "Authors"
+    },
+    "name": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
     }
   }
 }
