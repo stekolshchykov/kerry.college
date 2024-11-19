@@ -3,18 +3,22 @@ import {useRootStore} from "@/providers/RootStoreProvider";
 import ContentMaestroUi from "@/ui/content-maestro-ui";
 import PageInfoUi from "@/ui/page-info-ui";
 import SelectUI from "@/ui/select-ui";
-import gsspl from "@/util/GSSPL";
 import {observer} from "mobx-react-lite";
-import {GetServerSideProps} from "next";
 import React from "react";
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-    gsspl.log(context.req, context)
-    return {props: {}};
+
+export async function getStaticProps() {
+    console.log("getStaticProps executed");
+    return {
+        props: {
+            posts: 112211,
+        },
+    };
 }
 
-const Home = observer(() => {
+const Home = observer(({posts}: { posts: number }) => {
 
+    console.log("Props in browser:", posts);
 
     const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Software Development");
     const [currentDayI, setCurrentDayI] = React.useState<number | null>(null);
@@ -38,6 +42,8 @@ const Home = observer(() => {
 
     return (
         <>
+            {/*<h1>Home Page</h1>*/}
+            {/*<p>Posts: {posts}</p>*/}
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
                 <PageInfoUi
                     title={"Schedule"}

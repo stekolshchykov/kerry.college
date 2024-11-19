@@ -1,4 +1,5 @@
 import PageLayout from "@/layout/page-layout";
+import Image from "next/image"; // Импортируем компонент Image
 import React from "react";
 
 const ContentMaestroUi = () => {
@@ -7,10 +8,12 @@ const ContentMaestroUi = () => {
             <PageLayout isContainer={true} className={""}>
                 <div className={"flex gap-[25px] py-[50px] flex-col md:flex-row"}>
                     <div className={"w-full md:max-w-[200px] h-auto"}>
-                        <img
-                            src={"./avatar/admin.png"}
+                        <Image
+                            src="/avatar/admin.png" // Обратите внимание на абсолютный путь
                             className={"w-full h-auto rounded-full"}
                             alt="Admin Avatar"
+                            width={200} // Укажите точные размеры изображения
+                            height={200} // Укажите точные размеры изображения
                         />
                     </div>
                     <div className={"flex flex-col gap-2"}>
@@ -47,6 +50,6 @@ const ContentMaestroUi = () => {
             </PageLayout>
         </PageLayout>
     );
-}
+};
 
 export default ContentMaestroUi;

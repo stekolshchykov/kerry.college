@@ -1,3 +1,4 @@
+import Image from "next/image"; // Импортируем компонент Image
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {useState} from "react";
@@ -30,17 +31,28 @@ const HeaderUi = () => {
                             <div className="row">
                                 <div className="col py-[50px] px-[25px]">
                                     <div className="flex justify-between items-center">
-                                        <img className="w-[200px]" src="/logo.png" alt="Logo"/>
+                                        {/* Логотип */}
+                                        <Image
+                                            src="/logo.png"
+                                            alt="Logo"
+                                            width={200}
+                                            height={60} // Укажите точные размеры логотипа
+                                            className="w-[200px]"
+                                        />
+                                        {/* Навигационные ссылки */}
                                         <ul className="gap-4 hidden lg:flex">
                                             {links.map((l, k) => (
-                                                <li key={k}
-                                                    className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer ${l.isComingSoon && "opacity-40"}`}>
-                                                    <Link href={l.link}>
-                                                        {l.title}
-                                                    </Link>
+                                                <li
+                                                    key={k}
+                                                    className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer ${
+                                                        l.isComingSoon && "opacity-40"
+                                                    }`}
+                                                >
+                                                    <Link href={l.link}>{l.title}</Link>
                                                 </li>
                                             ))}
                                         </ul>
+                                        {/* Иконка гамбургера */}
                                         <RxHamburgerMenu
                                             size={30}
                                             className={`lg:hidden flex transition cursor-pointer ${isMenuOpen ? "rotate-90" : ""}`}
@@ -56,15 +68,28 @@ const HeaderUi = () => {
 
             {/* Мобильное меню */}
             <div
-                className={`fixed top-0 right-0 h-full w-3/4 bg-background transition-transform transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} z-50`}>
+                className={`fixed top-0 right-0 h-full w-3/4 bg-background transition-transform transform ${
+                    isMenuOpen ? "translate-x-0" : "translate-x-full"
+                } z-50`}
+            >
                 <div className={"pl-8 pt-5 pb-4 bg-background border-b"}>
-                    <img className="w-[200px]" src="/logo.png" alt="Logo"/>
+                    {/* Логотип в мобильном меню */}
+                    <Image
+                        src="/logo.png"
+                        alt="Logo"
+                        width={200}
+                        height={60}
+                        className="w-[200px]"
+                    />
                 </div>
                 <div className="flex flex-col items-start pt-4 pl-8 space-y-2">
                     {links.map((l, k) => (
                         <Link href={l.link} key={k} onClick={() => setIsMenuOpen(false)}>
                             <span
-                                className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer ${l.isComingSoon && "opacity-40"}`}>
+                                className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer ${
+                                    l.isComingSoon && "opacity-40"
+                                }`}
+                            >
                                 {l.title}
                             </span>
                         </Link>
@@ -72,7 +97,7 @@ const HeaderUi = () => {
                 </div>
             </div>
 
-            {/* Затемненный фон при открытии меню */}
+            {/* Затемнённый фон при открытии меню */}
             {isMenuOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity"
