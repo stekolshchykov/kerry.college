@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
     const getProxyImageUrl = (url: string): string => {
         return `/api/image-proxy?url=${encodeURIComponent(url)}`;
     };
-
+    
     return (
         <>
             <PageLayout isContainer={true} className="bg-mina text-white">
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                                         className="rounded"
                                     />
                                     <div className="text-m font-b leading-1">
-                                        {user.name} {user.lastName}
+                                        {user.username}
                                     </div>
                                     <div className="text-s leading-[0.2]">
                                         {[
