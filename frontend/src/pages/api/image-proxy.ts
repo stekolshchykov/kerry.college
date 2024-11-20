@@ -4,7 +4,7 @@ import {NextApiRequest, NextApiResponse} from "next";
 const URL: string = process.env.NEXT_PUBLIC_IMG_URL_FOR_HANDLER || "";
 
 const proxy = createProxyMiddleware({
-    target: URL, // Сервер с изображениями
+    target: URL,
     changeOrigin: true,
     pathRewrite: (path, req: any) => {
         const url = req.query.url as string;
@@ -12,7 +12,10 @@ const proxy = createProxyMiddleware({
     },
 });
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    // Устанавливаем заголовки кеширования
+    res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate=3600"); // 24 часа кеша на уровне CDN
+
     return proxy(req, res, (result) => {
         if (result instanceof Error) {
             console.error("Ошибка прокси:", result);
