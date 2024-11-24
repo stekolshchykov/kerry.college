@@ -5,6 +5,10 @@ module.exports = {
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+    safelist: [
+        "text-xs", "text-s", "text-m", "text-l", "text-xl", "text-xxl",
+        "rotate-90", "opacity-40", "translate-x-0", "translate-x-full",
+    ],
     theme: {
         extend: {
             colors: {
@@ -16,8 +20,8 @@ module.exports = {
                 sans: ['Alegreya Sans', 'sans-serif'],
             },
             fontWeight: {
-                b: '700', // жирный
-                l: '300', // тонкий
+                b: '700',
+                l: '300',
             },
             fontSize: {
                 xs: ['12px', 'auto'],
@@ -25,7 +29,7 @@ module.exports = {
                 m: ['16px', 'auto'],
                 l: ['24px', 'auto'],
                 xl: ['28px', 'auto'],
-                xxl: ['36px', 'auto'], // для xxl
+                xxl: ['36px', 'auto'],
             },
             spacing: {
                 32: '32px',
@@ -35,4 +39,4 @@ module.exports = {
         },
     },
     plugins: [],
-}
+};

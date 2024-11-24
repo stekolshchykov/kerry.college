@@ -1,4 +1,4 @@
-import Image from "next/image"; // Импортируем компонент Image
+import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {useState} from "react";
@@ -23,88 +23,70 @@ const HeaderUi = () => {
     ];
 
     return (
-        <div>
-            <div className="container-full max-w-[100vw] max-auto overflow-hidden">
-                <div className="row overflow-hidden max-w-[100vw]">
-                    <div className="col">
-                        <div className="container max-w-[1200px]">
-                            <div className="row">
-                                <div className="col py-[50px] px-[25px]">
-                                    <div className="flex justify-between items-center">
-                                        {/* Логотип */}
-                                        <Image
-                                            src="/logo.png"
-                                            alt="Logo"
-                                            width={200}
-                                            height={60} // Укажите точные размеры логотипа
-                                            className="w-[200px]"
-                                        />
-                                        {/* Навигационные ссылки */}
-                                        <ul className="gap-4 hidden lg:flex">
-                                            {links.map((l, k) => (
-                                                <li
-                                                    key={k}
-                                                    className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer ${
-                                                        l.isComingSoon && "opacity-40"
-                                                    }`}
-                                                >
-                                                    <Link href={l.link}>{l.title}</Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        {/* Иконка гамбургера */}
-                                        <RxHamburgerMenu
-                                            size={30}
-                                            className={`lg:hidden flex transition cursor-pointer ${isMenuOpen ? "rotate-90" : ""}`}
-                                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <header>
+            <div className="container mx-auto px-4 py-6">
+                <div className="flex justify-between items-center">
+                    {/* Логотип */}
+                    <Link href="/">
+                        <Image src="/logo.png" alt="Logo" width={200} height={60}/>
+                    </Link>
+
+                    {/* Навигация для десктопа */}
+                    <nav className="hidden lg:flex gap-4">
+                        {links.map((l, k) => (
+                            <Link key={k} href={l.link} className="no-underline">
+                <span
+                    className={`text-base cursor-pointer transition-opacity ${
+                        l.isActive ? "text-accent" : "text-black"
+                    } ${l.isComingSoon ? "opacity-40" : "hover:text-accent"}`}
+                >
+                  {l.title}
+                </span>
+                            </Link>
+                        ))}
+                    </nav>
+
+                    {/* Иконка гамбургера */}
+                    <RxHamburgerMenu
+                        size={30}
+                        className="lg:hidden cursor-pointer"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    />
                 </div>
             </div>
 
             {/* Мобильное меню */}
             <div
-                className={`fixed top-0 right-0 h-full w-3/4 bg-background transition-transform transform ${
+                className={`fixed top-0 right-0 h-full w-3/4 bg-white shadow-lg transition-transform transform ${
                     isMenuOpen ? "translate-x-0" : "translate-x-full"
                 } z-50`}
             >
-                <div className={"pl-8 pt-5 pb-4 bg-background border-b"}>
-                    {/* Логотип в мобильном меню */}
-                    <Image
-                        src="/logo.png"
-                        alt="Logo"
-                        width={200}
-                        height={60}
-                        className="w-[200px]"
-                    />
+                <div className="p-6 border-b">
+                    <Image src="/logo.png" alt="Logo" width={150} height={50}/>
                 </div>
-                <div className="flex flex-col items-start pt-4 pl-8 space-y-2">
+                <nav className="flex flex-col p-6 space-y-4">
                     {links.map((l, k) => (
-                        <Link href={l.link} key={k} onClick={() => setIsMenuOpen(false)}>
-                            <span
-                                className={`text-m ${l.isActive ? "text-accent" : ""} hover:text-accent transition cursor-pointer ${
-                                    l.isComingSoon && "opacity-40"
-                                }`}
-                            >
-                                {l.title}
-                            </span>
+                        <Link key={k} href={l.link} className="no-underline" onClick={() => setIsMenuOpen(false)}>
+              <span
+                  className={`text-lg cursor-pointer transition-opacity ${
+                      l.isActive ? "text-accent" : "text-black"
+                  } ${l.isComingSoon ? "opacity-40" : "hover:text-accent"}`}
+              >
+                {l.title}
+              </span>
                         </Link>
                     ))}
-                </div>
+                </nav>
             </div>
 
-            {/* Затемнённый фон при открытии меню */}
+            {/* Фон-затемнение при открытом меню */}
             {isMenuOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity"
+                    className="fixed inset-0 bg-black bg-opacity-50 z-40"
                     onClick={() => setIsMenuOpen(false)}
                 ></div>
             )}
-        </div>
+        </header>
     );
 };
 
