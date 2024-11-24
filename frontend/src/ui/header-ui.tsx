@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {RxHamburgerMenu} from "react-icons/rx";
 
 const HeaderUi = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [imageError, setImageError] = useState(false);  // Состояние для отслеживания ошибки изображения
+    const [imageSrc, setImageSrc] = useState("/logo.png"); // Состояние для хранения пути к изображению
     const router = useRouter();
     const path = router.pathname;
 
@@ -22,13 +24,40 @@ const HeaderUi = () => {
         {title: "Contact", link: "/contact", isActive: path === "/contact", isComingSoon: true},
     ];
 
+    // Функция для проверки доступности изображения
+    const checkImageAvailability = async (url: string) => {
+        try {
+            const response = await fetch(url, {method: "HEAD"}); // Отправляем запрос HEAD для проверки
+            if (response.ok) {
+                setImageSrc(url); // Если изображение доступно, обновляем состояние с правильным путем
+            } else {
+                setImageError(true); // Если ошибка 403 или другая ошибка, используем заглушку
+            }
+        } catch (error) {
+            setImageError(true); // Если произошла ошибка при запросе, показываем заглушку
+        }
+    };
+
+    useEffect(() => {
+        // Проверяем доступность изображения при монтировании компонента
+        checkImageAvailability("/logo.png");
+    }, []);
+
+    // Путь к изображению-заглушке
+    const fallbackImage = "/admin/admin.png";
+
     return (
         <header>
             <div className="container mx-auto px-4 py-6">
                 <div className="flex justify-between items-center">
-                    {/* Логотип */}
+                    {/* Логотип с проверкой доступности изображения */}
                     <Link href="/">
-                        <Image src="/logo.png" alt="Logo" width={200} height={60}/>
+                        <Image
+                            src={imageError || !imageSrc ? fallbackImage : imageSrc}  // Если ошибка или нет изображения - показываем заглушку
+                            alt="Logo"
+                            width={200}
+                            height={60}
+                        />
                     </Link>
 
                     {/* Навигация для десктопа */}
@@ -62,7 +91,13 @@ const HeaderUi = () => {
                 } z-50`}
             >
                 <div className="p-6 border-b">
-                    <Image src="/logo.png" alt="Logo" width={150} height={50}/>
+                    {/* Логотип в мобильном меню с проверкой доступности изображения */}
+                    <Image
+                        src={imageError || !imageSrc ? fallbackImage : imageSrc}  // Применение того же принципа для мобильного меню
+                        alt="Logo"
+                        width={150}
+                        height={50}
+                    />
                 </div>
                 <nav className="flex flex-col p-6 space-y-4">
                     {links.map((l, k) => (

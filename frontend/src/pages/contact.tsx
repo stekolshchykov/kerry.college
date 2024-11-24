@@ -6,6 +6,7 @@ import React, {useEffect, useState} from "react";
 
 const Contact: React.FC = () => {
     const [users, setUsers] = useState<UserI[]>([]);
+    const fallbackImage = "/avatar/admin.png"; // Путь к заглушке
 
     const getMembers = async (): Promise<void> => {
         try {
@@ -25,7 +26,7 @@ const Contact: React.FC = () => {
     const getProxyImageUrl = (url: string): string => {
         return `/api/image-proxy?url=${encodeURIComponent(url)}`;
     };
-    
+
     return (
         <>
             <PageLayout isContainer={true} className="bg-mina text-white">
@@ -45,15 +46,17 @@ const Contact: React.FC = () => {
                             {users.map((user) => (
                                 <li key={user.id} className="flex flex-col gap-1">
                                     <img
-                                        src={getProxyImageUrl(user.avatar ? user.avatar[0]?.url : "/default-avatar.png")}
+                                        src={getProxyImageUrl(user.avatar ? user.avatar[0]?.url : fallbackImage)}
                                         alt="avatar"
                                         width={180}
                                         height={180}
                                         className="rounded"
+                                        onError={(e) => {
+                                            const target = e.target as HTMLImageElement;
+                                            target.src = fallbackImage;
+                                        }}
                                     />
-                                    <div className="text-m font-b leading-1">
-                                        {user.username}
-                                    </div>
+                                    <div className="text-m font-b leading-1">{user.username}</div>
                                     <div className="text-s leading-[0.2]">
                                         {[
                                             user.isVolunteer && "Volunteer",
