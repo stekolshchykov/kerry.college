@@ -21,7 +21,7 @@ const HeaderUi = () => {
         {title: "Ideas", link: "/ideas", isActive: path === "/ideas", isComingSoon: true},
         {title: "Articles", link: "/articles", isActive: path === "/articles", isComingSoon: true},
         {title: "Forum", link: "/forum", isActive: path === "/forum", isComingSoon: true},
-        {title: "Contact", link: "/contact", isActive: path === "/contact", isComingSoon: true},
+        {title: "Contact", link: "/contact", isActive: path === "/contact", isComingSoon: false},
     ];
 
     // Функция для проверки доступности изображения
@@ -33,7 +33,8 @@ const HeaderUi = () => {
             } else {
                 setImageError(true); // Если ошибка 403 или другая ошибка, используем заглушку
             }
-        } catch (error) {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (error: any) {
             setImageError(true); // Если произошла ошибка при запросе, показываем заглушку
         }
     };

@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
             const response = await axiosApiInstance().get("/users?populate=*");
             const users = response.data as UserI[];
             setUsers(users);
-        } catch (error) {
+        } catch (error: any) {
             console.error("Ошибка при получении пользователей:", error);
             setUsers([]);
         }
@@ -34,43 +34,50 @@ const Contact: React.FC = () => {
                     title="Contact"
                     subTitle={
                         <div>
-                            View the staff list, send an email, or become a website volunteer.
+                            On this page, you can send us a message and learn more about our team.
                         </div>
                     }
                 />
             </PageLayout>
             <PageLayout isContainer={true} className="mt-[50px] mb-[50px]">
                 <div className="col">
-                    <div className={"flex max-md:flex-col max-md:gap-3 gap-5"}>
-                        <ul className="flex gap-3">
-                            {users.map((user) => (
-                                <li key={user.id} className="flex flex-col gap-1">
-                                    <img
-                                        src={getProxyImageUrl(user.avatar ? user.avatar[0]?.url : fallbackImage)}
-                                        alt="avatar"
-                                        width={180}
-                                        height={180}
-                                        className="rounded"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.src = fallbackImage;
-                                        }}
-                                    />
-                                    <div className="text-m font-b leading-1">{user.username}</div>
-                                    <div className="text-s leading-[0.2]">
-                                        {[
-                                            user.isVolunteer && "Volunteer",
-                                            user.isAuthor && "Author",
-                                            user.isTeacher && "Teacher",
-                                            user.isStudent && "Student",
-                                        ]
-                                            .filter(Boolean)
-                                            .join(", ")}
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
+
+                    <div className={"file flex-initial"}>
+                        <div className={"flex "}>
+                            {/*<ContactForm/>*/}
+                        </div>
+                        <div className={"flex "}>
+                            <ul className="flex gap-3">
+                                {users.map((user) => (
+                                    <li key={user.id} className="flex flex-col gap-1">
+                                        <img
+                                            src={getProxyImageUrl(user.avatar ? user.avatar[0]?.url : fallbackImage)}
+                                            alt="avatar"
+                                            width={180}
+                                            height={180}
+                                            className="rounded"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.src = fallbackImage;
+                                            }}
+                                        />
+                                        <div className="text-m font-b leading-1">{user.username}</div>
+                                        <div className="text-s leading-[0.2]">
+                                            {[
+                                                user.isVolunteer && "Volunteer",
+                                                user.isAuthor && "Author",
+                                                user.isTeacher && "Teacher",
+                                                user.isStudent && "Student",
+                                            ]
+                                                .filter(Boolean)
+                                                .join(", ")}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </PageLayout>
         </>
