@@ -6,15 +6,22 @@ import React, {useEffect, useState} from "react";
 
 const Contact: React.FC = () => {
     const [users, setUsers] = useState<UserI[]>([]);
-    const fallbackImage = "/avatar/admin.png"; // Путь к заглушке
+    const fallbackImage = "/avatar/admin.png"; // Path to fallback image
 
     const getMembers = async (): Promise<void> => {
         try {
-            const response = await axiosApiInstance().get("/users?populate=*");
-            const users = response.data as UserI[];
+            // const jwt = localStorage.getItem("jwt"); // Retrieve JWT token from local storage or any other secure place
+            const response = await axiosApiInstance().post("/", {
+                path: "users",
+                method: "GET",
+                params: {populate: "*"},
+            }).catch((error) => {
+                console.error("Error fetching users:", error);
+            });
+            const users = response?.data as UserI[] || [];
             setUsers(users);
         } catch (error: any) {
-            console.error("Ошибка при получении пользователей:", error);
+            console.error("Error fetching users:", error);
             setUsers([]);
         }
     };
@@ -41,7 +48,6 @@ const Contact: React.FC = () => {
             </PageLayout>
             <PageLayout isContainer={true} className="mt-[50px] mb-[50px]">
                 <div className="col">
-
                     <div className={"file flex-initial"}>
                         <div className={"flex "}>
                             {/*<ContactForm/>*/}
@@ -77,7 +83,6 @@ const Contact: React.FC = () => {
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </PageLayout>
         </>
