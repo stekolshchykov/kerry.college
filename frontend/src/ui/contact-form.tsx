@@ -22,27 +22,33 @@ const ContactForm: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
         try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
+            const response = await fetch("/api/proxy", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    path: "messages",
+                    method: "POST",
+                    data: {"name": "11", "email": "1", "message": "1", "subject": "1"},
+                }),
             });
 
-            if (response.ok) {
+            if (!response.ok) {
                 setFormData({
                     name: '',
                     email: '',
                     message: '',
                     subject: '',
                 });
-            } else {
-                throw new Error('Failed to send message');
             }
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        } catch (_) {
+
+            const responseData = await response.json();
+            console.log("Message sent successfully:", responseData);
+        } catch (error) {
+            console.error("Failed to send message:", error);
         }
     };
 
@@ -50,7 +56,7 @@ const ContactForm: React.FC = () => {
         <div className="w-full flex items-center justify-center">
             <div className="min-w-full">
                 <form onSubmit={handleSubmit} className="w-full">
-                    
+
                     <InputUi
                         label={"Subject"}
                         value={formData.name}
