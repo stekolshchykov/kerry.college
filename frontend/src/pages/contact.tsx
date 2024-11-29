@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                     <div className={"text-l mb-3 font-b"}>Get in touch with us:</div>
                     <ContactForm/>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 mt-[50px] md:mt-0">
                     <div className={"text-l mb-3 font-b"}>Student-Driven Project</div>
                     <div>
                         This website is proudly designed and developed by a team of college students and dedicated
