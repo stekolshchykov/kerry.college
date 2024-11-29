@@ -48,9 +48,23 @@ const Contact: React.FC = () => {
                 />
             </PageLayout>
 
-            <PageLayout isContainer={true} className="mt-[0px] mb-[0px]">
-                <div className="col">
+            <PageLayout isContainer={true} className="mt-5 mb-[0px]">
+                <div className="col-md-8">
+                    <div className={"text-l mb-3 font-b"}>Get in touch with us:</div>
                     <ContactForm/>
+                </div>
+                <div className="col-md-4">
+                    <div className={"text-l mb-3 font-b"}>Student-Driven Project</div>
+                    <div>
+                        This website is proudly designed and developed by a team of college students and dedicated
+                        volunteers as part of an exciting educational initiative aimed at gaining real-world experience
+                        and enhancing our skills. We are committed to continuously improving the platform to provide you
+                        with accurate and valuable information. However, as this is a learning-driven project supported
+                        by limited resources, there might occasionally be delays in processing your inquiries or
+                        updating certain sections of the site. We deeply appreciate your understanding, patience, and
+                        encouragement as we grow and strive to create a resource that benefits everyone. Thank you for
+                        supporting our journey!
+                    </div>
                 </div>
             </PageLayout>
 
@@ -58,9 +72,6 @@ const Contact: React.FC = () => {
                 <div className="col">
                     <div className={"text-l mb-3 font-b"}>Our team:</div>
                     <div className={"file flex-initial"}>
-                        <div className={"flex "}>
-                            {/*<ContactForm/>*/}
-                        </div>
                         <div className={"flex "}>
                             <ul className="flex gap-3">
                                 {users.map((user) => (
