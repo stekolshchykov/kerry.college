@@ -5,13 +5,14 @@ interface InputUiProps {
     value?: string;
     onChange?: (e: string) => void;
     rows?: number;
+    additionalClasses?: string;
 }
 
 const TextareaUi = (props: InputUiProps) => {
     const id = useId();
     return (
-        <div className={"w-full"}>
-            {props?.label && <label htmlFor={id} className="block text-sm font-medium text-gray-700 w-full">
+        <div className={`w-full ${props.additionalClasses}`}>
+            {props?.label && <label htmlFor={id} className="block text-sm font-medium text-gray-700 w-full  mb-1">
                 {props?.label}:
             </label>}
             <textarea

@@ -1,3 +1,4 @@
+import ButtonUi from "@/ui/button-ui";
 import InputUi from "@/ui/input-ui";
 import TextareaUi from "@/ui/textarea-ui";
 import React, {useState} from 'react';
@@ -10,6 +11,7 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
+
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -17,16 +19,9 @@ const ContactForm: React.FC = () => {
         subject: '',
     });
 
-    const [status, setStatus] = useState<string | null>(null);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
-    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setStatus(null);
-
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
@@ -37,7 +32,6 @@ const ContactForm: React.FC = () => {
             });
 
             if (response.ok) {
-                setStatus('Message sent successfully!');
                 setFormData({
                     name: '',
                     email: '',
@@ -49,16 +43,14 @@ const ContactForm: React.FC = () => {
             }
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (_) {
-            setStatus('Failed to send message. Please try again.');
         }
     };
 
     return (
         <div className="w-full flex items-center justify-center">
             <div className="min-w-full">
-                {/*<InputUi label={"Name"} value={"11"} onChange={}/>*/}
-                <form onSubmit={handleSubmit} className="space-y-4">
-
+                <form onSubmit={handleSubmit} className="w-full">
+                    
                     <InputUi
                         label={"Subject"}
                         value={formData.name}
@@ -67,34 +59,24 @@ const ContactForm: React.FC = () => {
                     <InputUi
                         label={"Name"}
                         value={formData.subject}
-                        onChange={subject => setFormData({...formData, subject: `${subject}`})}/>
+                        onChange={subject => setFormData({...formData, subject: `${subject}`})}
+                        additionalClasses={"mt-2"}/>
 
                     <InputUi
                         label={"Email"}
                         value={formData.email}
-                        onChange={email => setFormData({...formData, email: `${email}`})}/>
+                        onChange={email => setFormData({...formData, email: `${email}`})}
+                        additionalClasses={"mt-2"}/>
 
                     <TextareaUi
                         label={"Message"}
                         value={formData.message}
-                        onChange={message => setFormData({...formData, message: `${message}`})}/>
+                        onChange={message => setFormData({...formData, message: `${message}`})}
+                        additionalClasses={"mt-2"}/>
 
-                    <button
-                        type="submit"
-                        className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow"
-                    >
-                        Send
-                    </button>
+                    <ButtonUi type={"submit"} label={"Send"} additionalClasses={"mt-3"}/>
+
                 </form>
-                {status && (
-                    <p
-                        className={`mt-4 text-center ${
-                            status.includes('successfully') ? 'text-green-500' : 'text-red-500'
-                        }`}
-                    >
-                        {status}
-                    </p>
-                )}
             </div>
         </div>
     );
