@@ -1,3 +1,4 @@
+import InputUi from "@/ui/input-ui";
 import React, {useState} from 'react';
 
 interface FormData {
@@ -52,52 +53,26 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100 py-6 px-4">
-            <div className="w-full max-w-lg bg-white shadow-md rounded-lg p-8">
-                <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Us</h1>
+        <div className="w-full flex items-center justify-center">
+            <div className="min-w-full">
+                {/*<InputUi label={"Name"} value={"11"} onChange={}/>*/}
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                            Name:
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                            Email:
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
-                            Subject:
-                        </label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            value={formData.subject}
-                            onChange={handleChange}
-                            required
-                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                        />
-                    </div>
+
+                    <InputUi
+                        label={"Subject"}
+                        value={formData.name}
+                        onChange={name => setFormData({...formData, name: `${name}`})}/>
+
+                    <InputUi
+                        label={"Name"}
+                        value={formData.subject}
+                        onChange={subject => setFormData({...formData, subject: `${subject}`})}/>
+
+                    <InputUi
+                        label={"Email"}
+                        value={formData.email}
+                        onChange={email => setFormData({...formData, email: `${email}`})}/>
+
                     <div>
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                             Message:

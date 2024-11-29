@@ -1,5 +1,6 @@
 import PageLayout from "@/layout/page-layout";
 import {UserI} from "@/type";
+import ContactForm from "@/ui/contact-form";
 import PageInfoUi from "@/ui/page-info-ui";
 import axiosApiInstance from "@/util/axios-api-instance";
 import React, {useEffect, useState} from "react";
@@ -46,8 +47,16 @@ const Contact: React.FC = () => {
                     }
                 />
             </PageLayout>
+
+            <PageLayout isContainer={true} className="mt-[0px] mb-[0px]">
+                <div className="col">
+                    <ContactForm/>
+                </div>
+            </PageLayout>
+
             <PageLayout isContainer={true} className="mt-[50px] mb-[50px]">
                 <div className="col">
+                    <div className={"text-l mb-3 font-b"}>Our team:</div>
                     <div className={"file flex-initial"}>
                         <div className={"flex "}>
                             {/*<ContactForm/>*/}
