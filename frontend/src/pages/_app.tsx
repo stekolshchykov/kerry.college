@@ -7,6 +7,8 @@ import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import "@/globals.css";
+import 'react-toastify/dist/ReactToastify.css';
+import {ToastContainer} from "react-toastify";
 
 function MyApp({Component, pageProps}: AppProps) {
     return (
@@ -18,6 +20,7 @@ function MyApp({Component, pageProps}: AppProps) {
             <Component {...pageProps} />
             <FooterUi/>
             <Analytics/>
+            <ToastContainer/>
         </RootStoreProvider>
     );
 }

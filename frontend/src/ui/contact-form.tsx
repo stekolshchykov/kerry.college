@@ -2,6 +2,7 @@ import ButtonUi from "@/ui/button-ui";
 import InputUi from "@/ui/input-ui";
 import TextareaUi from "@/ui/textarea-ui";
 import React, {useState} from 'react';
+import {toast} from "react-toastify";
 
 interface FormData {
     name: string;
@@ -32,7 +33,7 @@ const ContactForm: React.FC = () => {
                 body: JSON.stringify({
                     path: "messages",
                     method: "POST",
-                    data: {"name": "11", "email": "1", "message": "1", "subject": "1"},
+                    data: formData,
                 }),
             });
 
@@ -43,6 +44,11 @@ const ContactForm: React.FC = () => {
                     message: '',
                     subject: '',
                 });
+                toast("Thank you! Your message has been successfully sent. We’ll get back to you as soon as possible.")
+
+            } else {
+                toast("Oops! Something went wrong. Please try again later or contact us directly if the issue persists.")
+
             }
 
             const responseData = await response.json();
