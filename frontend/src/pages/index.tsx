@@ -40,6 +40,8 @@ const Home = observer(({posts}: { posts: number }) => {
         }
     }, []);
 
+    console.log("Schedule rendered");
+
     return (
         <>
             {/*<h1>Home Page</h1>*/}
