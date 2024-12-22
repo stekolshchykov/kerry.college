@@ -27,6 +27,7 @@ module.exports = {
                 xs: ['12px', 'auto'],
                 s: ['14px', 'auto'],
                 m: ['16px', 'auto'],
+                m2: ['20px', 'auto'],
                 l: ['24px', 'auto'],
                 xl: ['28px', 'auto'],
                 xxl: ['36px', 'auto'],

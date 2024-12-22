@@ -20,6 +20,79 @@ export interface StaffCardI {
     job: string;
 }
 
+// Articles
+
+export interface ArticleI {
+    alias: string;
+    title: string;
+    img?: string;
+    description: string;
+    text: string;
+    author: string;
+}
+
+const dataArticles: ArticleI[] = [
+    {
+        alias: "back-to-education-allowance",
+        title: "How to Apply for the Back to Education Allowance (BTEA) in Ireland",
+        description: "Learn how to receive the Back to Education Allowance (BTEA) and Basic Out-of-Pocket Expenses (BOTP) weekly payments in Ireland. This guide outlines eligibility criteria, application steps, and tips for maintaining payments while pursuing your education or professional training.",
+        text: `
+    <div class="font-bold text-m2">To receive Back to Education Allowance (BTEA) and Basic Out-of-Pocket Expenses (BOTP) weekly payments in Ireland, you must:</div>
+    <div class="font-bold">1. Registration in the BTEA program:</div>
+    BTEA is a government program that helps people on welfare to return to education by covering some of the costs. It is intended for those who wish to complete educational courses or professional training.
+    
+    <div class="font-bold">To get a BTEA you must:</div>
+    • Be 21 years of age or older (or 24 years of age for advanced training programs).<br>
+    • Receive social benefits (eg Jobseeker's Allowance, Jobseeker's Benefit) for a certain minimum period.<br>
+    • Confirm that your studies will lead to a new qualification that can improve your chances of employment.<br>
+    <div class="font-bold">2. Apply for participation in the BTEA program:</div>
+    • Contact your local Social Security office (Intreo Centre).<br>
+    • Apply for the BTEA program. You will need to confirm your education and social security status.<br>
+    <div class="font-bold">3. Receiving weekly payments:</div>
+    • As a BTEA member, you will receive a fixed weekly payment which can replace your current benefit (eg Jobseeker's Allowance).<br>
+    • Payments will be made to the bank account specified during registration.<br>
+    • In addition, additional training costs such as training materials and transport costs may be reimbursed under the BOTP.<br>
+    <div class="font-bold">4. Conditions for continuation of payments:</div>
+    • To receive payments, you must regularly attend training courses and comply with the program requirements. Lack of progress may result in termination of payments.<br>
+    • If there is a need for changes in the study program or interruptions, the social security service should be notified.<br>
+    <div class="font-bold">Additional information:</div>
+    Please consult your local Intreo office or gov.ie for specific conditions, as requirements may vary depending on your individual situation and institution.
+`,
+        author: "Mykhailo Katrukha"
+    },
+    {
+        alias: "impact-of-meditation-and-power-naps-on-productivity",
+        title: "The Impact of Meditation and Power Naps on Mindfulness and Productivity",
+        description: "This article explores the effects of meditation and power naps on mindfulness and productivity, based on a survey conducted among professionals and college students. It provides insights into the practices’ effectiveness, challenges, and practical tips to improve focus and cognitive performance.",
+        text: `
+        <div class="font-bold text-m2">Introduction</div>
+        <div>In today’s fast-paced world, professionals and students face increasing workloads and mental strain. With rapid technological advancements and information overload, especially in fields like information technology and programming, maintaining mental resilience is more important than ever. To explore the impact of practices like power naps and meditation on mindfulness and productivity, a survey was conducted among workers and college students using Google Forms.</div>
+        <div class="font-bold text-m2">Survey Insights on Meditation and Power Naps</div>
+        <div>The survey revealed several trends that highlight the current attitudes toward meditation and short naps:</div>
+        <div class="font-semibold">Meditation:</div>
+        <div>Most participants either do not practice meditation or do so irregularly. The average impact rating for meditation on productivity was 3 out of 5. Although few participants reported improved problem-solving and thought organization from meditation, it is not widely adopted. Many respondents cited a lack of time during their work or study day to engage in meditation.</div>
+        <div class="font-semibold">Power Naps (Short Naps):</div>
+        <div>Similarly, most respondents do not incorporate short naps into their routine, with their effect on productivity rated as moderate (average 3 out of 5). However, those who do take power naps reported improved cognitive functions, such as better attention and enhanced creativity. Despite these benefits, many participants prefer other methods to sustain their productivity throughout the day.</div>
+        <div class="font-semibold ">Factors Affecting Concentration:</div>
+        <div>Participants identified regular breaks and physical activity as the most effective ways to maintain concentration. Coffee and energy drinks also emerged as popular aids, though they are not considered substitutes for adequate rest.</div>
+        <div class="font-semibold">Tips for Improving Focus:</div>
+        <div>Respondents shared practical tips for boosting productivity, such as starting the morning with a meditation session or a short relaxation ritual. Some also recommended coffee as a helpful tool to stay alert during the workday.</div>
+        <div class="font-bold text-m2 ">Insights from Other Research</div>
+        <div>Although the survey’s sample size was limited, the findings align with broader scientific research. Studies have shown that even brief meditation sessions can enhance concentration and reduce stress, while naps have been proven to improve creativity and overall vitality.</div>
+        <div class="font-bold text-m2">Example of Successful Use of Power Naps at Maynooth University</div>
+        <div>Maynooth University has already implemented a nap room, emphasizing the importance of rest during periods of intense academic and professional work.</div>
+        <div class="font-bold text-m2">EnergyPod from MetroNaps: A Ready-Made Solution for Power Naps</div>
+        <div>The EnergyPod is designed for short naps, offering a practical solution for recovery during work hours. It could be an excellent addition to any workplace or study environment with a dedicated power nap space.</div>
+        <div class="font-bold text-m2">Conclusion</div>
+        <div>Although power naps and meditation have yet to become widely popular among the survey respondents, the study suggests that these practices hold significant potential for enhancing focus and productivity. Integrating short breaks for meditation or naps into daily routines can help reduce stress, improve cognitive function, and increase productivity. In some cases, staying 15 minutes longer at work or school to rest may be more beneficial than arriving on time without adequate sleep.</div>
+    `,
+        author: "Vitalii Stekolshchykov"
+    }
+
+]
+
+//
+
 // Members
 
 export interface MemberI {
@@ -32,17 +105,12 @@ const dataMembers: MemberI[] = [
     {
         name: "Vitalii Stekolshchykov",
         img: "members/stekolshchykov.png",
-        job: "Author"
+        job: "Co-Founder"
     },
     {
         name: "Oleksandr Dosenko",
         img: "",
         job: "Volunteer"
-    },
-    {
-        name: "Vitalii Konovaliuk",
-        img: "",
-        job: "Author"
     },
     {
         name: "Mykhailo Katrukha",
@@ -1663,4 +1731,4 @@ const markedDates: MarkedDatesI = {
 };
 
 
-export {dataCourse, dataStaff, markedDates, dataMembers};
+export {dataCourse, dataStaff, markedDates, dataMembers, dataArticles};
