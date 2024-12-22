@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
                     <div className={"text-l mb-3 font-b"}>Our team:</div>
                     <div className={"file flex-initial"}>
                         <div className={"flex "}>
-                            <ul className="flex gap-3">
+                            <ul className="flex gap-3 p-0">
                                 {dataMembers.map((member) => (
                                     <li key={member.name} className="flex flex-col gap-1">
                                         <img
