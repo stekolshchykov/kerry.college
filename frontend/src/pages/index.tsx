@@ -1,6 +1,7 @@
 import PageLayout from "@/layout/page-layout";
 import {motion} from "framer-motion";
 import Head from 'next/head';
+import Link from "next/link";
 import React from "react";
 
 const Index = () => {
@@ -78,9 +79,9 @@ const Index = () => {
                                 Explore inspiring articles written by our students, sharing their experiences and
                                 knowledge.
                             </p>
-                            <a href="/articles" className="text-accent text-m mt-4 inline-block hover:underline">
+                            <Link href="/articles" className="text-accent text-m mt-4 inline-block hover:underline">
                                 Read Articles
-                            </a>
+                            </Link>
                         </motion.div>
 
                         <motion.div
@@ -92,9 +93,9 @@ const Index = () => {
                             <p className="text-s text-mina">
                                 Keep track of your classes and stay on top of your academic journey.
                             </p>
-                            <a href="/schedule" className="text-accent text-m mt-4 inline-block hover:underline">
+                            <Link href="/schedule" className="text-accent text-m mt-4 inline-block hover:underline">
                                 View Schedules
-                            </a>
+                            </Link>
                         </motion.div>
 
                         <motion.div
@@ -106,10 +107,10 @@ const Index = () => {
                             <p className="text-s text-mina">
                                 Check the dates for holidays and plan your breaks effectively.
                             </p>
-                            <a href="/holiday"
-                               className="text-accent text-m mt-4 inline-block hover:underline">
+                            <Link href="/holiday"
+                                  className="text-accent text-m mt-4 inline-block hover:underline">
                                 View Calendar
-                            </a>
+                            </Link>
                         </motion.div>
 
                         <motion.div
@@ -121,9 +122,9 @@ const Index = () => {
                             <p className="text-s text-mina">
                                 Navigate the college with ease using our detailed campus maps.
                             </p>
-                            <a href="/map" className="text-accent text-m mt-4 inline-block hover:underline">
+                            <Link href="/map" className="text-accent text-m mt-4 inline-block hover:underline">
                                 Explore Maps
-                            </a>
+                            </Link>
                         </motion.div>
 
                         <motion.div
@@ -135,9 +136,9 @@ const Index = () => {
                             <p className="text-s text-mina">
                                 Find contact information for college departments and staff.
                             </p>
-                            <a href="/contact" className="text-accent text-m mt-4 inline-block hover:underline">
+                            <Link href="/contact" className="text-accent text-m mt-4 inline-block hover:underline">
                                 View Contacts
-                            </a>
+                            </Link>
                         </motion.div>
                     </motion.section>
                 </div>
@@ -158,9 +159,9 @@ const Index = () => {
                         community
                         together!
                     </p>
-                    <a href="/contact" className="text-accent text-m mt-4 inline-block hover:underline">
+                    <Link href="/contact" className="text-accent text-m mt-4 inline-block hover:underline">
                         Contact Us
-                    </a>
+                    </Link>
                 </motion.section>
             </PageLayout>
 

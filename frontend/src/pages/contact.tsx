@@ -34,8 +34,6 @@ const Contact: React.FC = () => {
     //     return `/api/image-proxy?url=${encodeURIComponent(url)}`;
     // };
 
-    console.log("+++dataMembers", dataMembers)
-
 
     return (
         <>
