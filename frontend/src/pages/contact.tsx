@@ -73,31 +73,34 @@ const Contact: React.FC = () => {
             <PageLayout isContainer={true} className="mt-[50px] mb-[50px]">
                 <div className="col">
                     <div className={"text-l mb-3 font-b"}>Our team:</div>
-                    <div className={"file flex-initial"}>
-                        <div className={"flex "}>
-                            <ul className="flex gap-3 p-0">
+                    <div className="file flex-initial">
+                        <div className="flex justify-start">
+                            <ul className="flex flex-wrap gap-3 p-0 justify-center sm:justify-start">
                                 {dataMembers.map((member) => (
-                                    <li key={member.name} className="flex flex-col gap-1">
-                                        <img
-                                            src={member.img || fallbackImage}
-                                            alt="avatar"
-                                            width={180}
-                                            height={180}
-                                            className="rounded"
-                                            onError={(e) => {
-                                                const target = e.target as HTMLImageElement;
-                                                target.src = fallbackImage;
-                                            }}
-                                        />
-                                        <div className="text-m font-b leading-1">{member.name}</div>
-                                        <div className="text-s leading-[0.2]">
-                                            {member.job}
+                                    <li key={member.name} className="flex flex-col items-center gap-3 w-[180px]">
+                                        <div className="w-[180px] h-[180px]">
+                                            <img
+                                                src={member.img || fallbackImage}
+                                                alt="avatar"
+                                                width={180}
+                                                height={180}
+                                                className="rounded-full"
+                                                onError={(e) => {
+                                                    const target = e.target as HTMLImageElement;
+                                                    target.src = fallbackImage;
+                                                }}
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="text-m font-b text-center">{member.name}</div>
+                                            <div className="text-s text-center">{member.job}</div>
                                         </div>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </PageLayout>
         </>

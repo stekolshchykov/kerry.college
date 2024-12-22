@@ -177,7 +177,7 @@ const Index = () => {
                                         alt="avatar"
                                         width={130}
                                         height={130}
-                                        className="rounded"
+                                        className="rounded-full"
                                     />
                                 </div>
                                 <div className="text-m">

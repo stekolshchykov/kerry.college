@@ -1,5 +1,4 @@
 import PageLayout from "@/layout/page-layout";
-import ContentMaestroUi from "@/ui/content-maestro-ui";
 import PageInfoUi from "@/ui/page-info-ui";
 import SelectUI from "@/ui/select-ui";
 import React from "react";
@@ -53,8 +52,6 @@ const Map = () => {
                 </div>
             </div>
         </PageLayout>
-
-        <ContentMaestroUi/>
 
     </>
 

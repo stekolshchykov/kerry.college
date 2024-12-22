@@ -1,6 +1,5 @@
 import {markedDates} from "@/data";
 import PageLayout from "@/layout/page-layout";
-import ContentMaestroUi from "@/ui/content-maestro-ui";
 import PageInfoUi from "@/ui/page-info-ui";
 import React, {useEffect, useState} from 'react';
 import Calendar from 'react-calendar';
@@ -106,8 +105,6 @@ const Holiday: React.FC = () => {
                 </div>
             </PageLayout>
 
-            <ContentMaestroUi/>
-            
         </>
     );
 }
