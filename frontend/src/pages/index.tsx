@@ -16,12 +16,12 @@ const Index = () => {
 
             {/* First Section with Background Image */}
             <PageLayout isContainer={false}
-                        className="mb-[25px] bg-cover bg-center h-[70vh] bg-[url('/main-promo.png')]">
+                        className="mb-[25px] bg-cover md:h-[70vh] bg-center bg-[url('/main-promo.png')]">
                 <div
-                    className="col-12 py-[50px] p-0 m-0 flex items-center justify-center text-center h-full bg-black bg-opacity-75">
+                    className="col-12 py-[50px] p-5 m-0 flex items-center justify-center text-center h-full bg-black bg-opacity-75">
                     <section>
                         <motion.h1
-                            className="text-xxxl font-b text-white mb-4"
+                            className="text-xxl md:text-xxxl font-b text-white mb-4"
                             initial={{opacity: 0, y: -50}}
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 1}}
@@ -41,14 +41,14 @@ const Index = () => {
             </PageLayout>
 
             {/* Mission Statement Section */}
-            <PageLayout isContainer={true} className="bg-background py-[50px]">
+            <PageLayout isContainer={true} className="bg-background py-16">
                 <motion.section
-                    className="text-center mb-10"
+                    className="text-center"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 0.8}}
                 >
-                    <h2 className="text-xl font-b text-mina mb-4">Our Mission</h2>
+                    <h2 className="text-xl font-b text-mina mb-2">Our Mission</h2>
                     <p className="text-m text-mina">
                         At Kerry College, we are committed to creating an inclusive community where students can excel
                         academically and personally. We aim to inspire innovation, support achievement, and nurture
@@ -60,7 +60,7 @@ const Index = () => {
             </PageLayout>
 
             {/* Resource Cards Section with Hover Effects */}
-            <PageLayout isContainer={true} className="mb-[25px] mt-[50px]">
+            <PageLayout isContainer={true} className="mb-[25px] px-3">
                 <div className="col-12 py-[50px] p-0 m-0">
                     <motion.section
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
@@ -144,14 +144,14 @@ const Index = () => {
             </PageLayout>
 
             {/* Collaboration Section with Bounce Effect */}
-            <PageLayout isContainer={true} className="bg-background py-[50px]">
+            <PageLayout isContainer={true} className="bg-background pb-16 md:pt-8">
                 <motion.section
                     className="text-center"
                     initial={{opacity: 0, y: 50}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 1}}
                 >
-                    <h2 className="text-xl font-b text-mina mb-4">Join Us in Collaboration</h2>
+                    <h2 className="text-xl font-b text-mina mb-4">Join Us</h2>
                     <p className="text-m text-mina">
                         We invite all enthusiastic students and faculty members to collaborate with us. Whether you
                         have creative ideas, articles, or projects, we’d love to hear from you. Let’s build a thriving
@@ -171,13 +171,13 @@ const Index = () => {
                         <div className="text-white text-center">
                             <PageLayout isContainer={false}
                                         className="flex gap-[25px] flex-col md:flex-row justify-start items-center">
-                                <div className="w-full md:max-w-[150px]">
+                                <div className="w-full md:max-w-[150px] flex text-center justify-center ">
                                     <img
                                         src={"members/stekolshchykov.png"}
                                         alt="avatar"
                                         width={130}
                                         height={130}
-                                        className="rounded-full"
+                                        className="rounded-full w-[50vw] md:w-[150px]"
                                     />
                                 </div>
                                 <div className="text-m">
