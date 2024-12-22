@@ -1,11 +1,21 @@
 import {dataArticles} from "@/data";
 import PageLayout from "@/layout/page-layout";
 import PageInfoUi from "@/ui/page-info-ui";
+import {Head} from "next/document";
 import React from "react";
 
 const Index = () => {
     return (
         <>
+            <Head>
+                <title>Kerry College Articles</title>
+                <meta name="description"
+                      content="Explore informative articles on various topics related to Kerry College, including academic resources, student life, and campus news."/>
+                <meta name="keywords"
+                      content="Kerry College, articles, academic resources, student life, campus news, college blog"/>
+                <meta name="author" content="Vitalii Stekolshchykov"/>
+            </Head>
+
             <PageLayout isContainer={true} className="bg-mina text-white">
                 <PageInfoUi
                     title="Articles"

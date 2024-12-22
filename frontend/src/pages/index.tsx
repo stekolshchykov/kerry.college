@@ -12,7 +12,7 @@ const Index = () => {
                 <meta name="description"
                       content="Official student portal of Kerry College with resources, articles, schedules, and more."/>
                 <meta name="keywords" content="Kerry College, student portal, resources, schedules, articles"/>
-                <meta name="author" content="Kerry College"/>
+                <meta name="author" content="Vitalii Stekolshchykov"/>
             </Head>
 
             {/* First Section with Background Image */}
@@ -35,7 +35,7 @@ const Index = () => {
                             animate={{opacity: 1, y: 0}}
                             transition={{duration: 1}}
                         >
-                            Your one-stop destination for articles, schedules, campus maps, and contacts.
+                            Your one-stop destination for articles, schedules, campus maps, and support.
                         </motion.p>
                     </section>
                 </div>

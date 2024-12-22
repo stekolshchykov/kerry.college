@@ -3,6 +3,7 @@ import {useRootStore} from "@/providers/RootStoreProvider";
 import PageInfoUi from "@/ui/page-info-ui";
 import SelectUI from "@/ui/select-ui";
 import {observer} from "mobx-react-lite";
+import Head from "next/head";
 import React from "react";
 
 export async function getStaticProps() {
@@ -42,6 +43,15 @@ const Home = observer(({posts}: { posts: number }) => {
 
     return (
         <>
+            <Head>
+                <title>Kerry College Schedules</title>
+                <meta name="description"
+                      content="Access the official schedules for classes, exams, and events at Kerry College. Stay updated with all academic timings."/>
+                <meta name="keywords"
+                      content="Kerry College, schedules, class schedule, exam timetable, events, academic calendar"/>
+                <meta name="author" content="Vitalii Stekolshchykov"/>
+            </Head>
+
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
                 <PageInfoUi
                     title={"Schedule"}

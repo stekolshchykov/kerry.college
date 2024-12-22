@@ -1,6 +1,7 @@
 import {markedDates} from "@/data";
 import PageLayout from "@/layout/page-layout";
 import PageInfoUi from "@/ui/page-info-ui";
+import Head from "next/head";
 import React, {useEffect, useState} from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -53,6 +54,16 @@ const Holiday: React.FC = () => {
 
     return (
         <>
+
+            <Head>
+                <title>Kerry College Holidays</title>
+                <meta name="description"
+                      content="Stay updated with the official holiday schedule for Kerry College, including academic breaks, public holidays, and events."/>
+                <meta name="keywords"
+                      content="Kerry College, holidays, academic breaks, public holidays, events, holiday schedule"/>
+                <meta name="author" content="Vitalii Stekolshchykov"/>
+            </Head>
+
             <PageLayout isContainer={true} className={"bg-mina text-white"}>
                 <PageInfoUi
                     title={"Holiday"}

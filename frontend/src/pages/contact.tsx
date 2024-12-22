@@ -2,6 +2,7 @@ import {dataMembers} from "@/data";
 import PageLayout from "@/layout/page-layout";
 import ContactForm from "@/ui/contact-form";
 import PageInfoUi from "@/ui/page-info-ui";
+import Head from "next/head";
 import React from "react";
 
 const Contact: React.FC = () => {
@@ -37,6 +38,16 @@ const Contact: React.FC = () => {
 
     return (
         <>
+
+            <Head>
+                <title>Kerry College Contacts</title>
+                <meta name="description"
+                      content="Find the official contact information for Kerry College, including departments, staff, and support services."/>
+                <meta name="keywords"
+                      content="Kerry College, contacts, staff directory, support services, department contacts"/>
+                <meta name="author" content="Vitalii Stekolshchykov"/>
+            </Head>
+
             <PageLayout isContainer={true} className="bg-mina text-white">
                 <PageInfoUi
                     title="Contact"

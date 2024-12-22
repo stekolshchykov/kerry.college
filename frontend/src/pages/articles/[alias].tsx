@@ -1,6 +1,7 @@
 import {dataArticles} from "@/data";
 import PageLayout from "@/layout/page-layout";
 import PageInfoUi from "@/ui/page-info-ui";
+import Head from "next/head";
 import {useRouter} from "next/router";
 import React from "react";
 
@@ -42,7 +43,19 @@ const Index = () => {
 
     else
         return <>
+
+            <Head>
+                <title>{article?.title} - Kerry College</title>
+                <meta name="description"
+                      content={article?.description}/>
+                <meta name="keywords"
+                      content={`Kerry College, article, academic success, study tips, resources, ${article?.title}`}/>
+                <meta name="author" content="Vitalii Stekolshchykov"/>
+            </Head>
+
+
             <Info/>
+
             <PageLayout isContainer={true} className={" mt-[50px] mb-[50px]"}>
                 <div className="col">
                     <div className={"text-xl mb-0 font-b"}>{article?.title}</div>

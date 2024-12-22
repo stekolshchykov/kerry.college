@@ -1,11 +1,20 @@
 import PageLayout from "@/layout/page-layout";
 import PageInfoUi from "@/ui/page-info-ui";
 import SelectUI from "@/ui/select-ui";
+import Head from "next/head";
 import React from "react";
 
 const Map = () => {
 
     return <>
+        <Head>
+            <title>Kerry College Campus Maps</title>
+            <meta name="description"
+                  content="Explore the official campus maps of Kerry College, find building locations, directions, and campus facilities."/>
+            <meta name="keywords"
+                  content="Kerry College, campus maps, building locations, directions, campus facilities"/>
+            <meta name="author" content="Vitalii Stekolshchykov"/>
+        </Head>
 
         <PageLayout isContainer={true} className={"bg-mina text-white"}>
             <PageInfoUi
