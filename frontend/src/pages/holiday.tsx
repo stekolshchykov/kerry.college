@@ -74,7 +74,7 @@ const Holiday: React.FC = () => {
                     }/>
             </PageLayout>
 
-            <PageLayout isContainer={true} className={" mt-[50px] mb-[50px]"}>
+            <PageLayout isContainer={true} className={" my-16"}>
                 <div className="col">
                     <div className={"flex max-md:flex-col max-md:gap-3 gap-5"}>
                         <div className={""}>

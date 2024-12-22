@@ -49,7 +49,7 @@ const HeaderUi = () => {
 
     return (
         <header>
-            <div className="container mx-auto px-4 py-6">
+            <div className="container mx-auto px-4 py-14">
                 <div className="flex justify-between items-center">
                     {/* Логотип с проверкой доступности изображения */}
                     <Link href="/">

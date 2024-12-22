@@ -6,35 +6,8 @@ import Head from "next/head";
 import React from "react";
 
 const Contact: React.FC = () => {
-    // const [users, setUsers] = useState<UserI[]>([]);
+
     const fallbackImage = "/avatar/admin.png"; // Path to fallback image
-    //
-    // const getMembers = async (): Promise<void> => {
-    //     try {
-    //         // const jwt = localStorage.getItem("jwt"); // Retrieve JWT token from local storage or any other secure place
-    //         const response = await axiosApiInstance().post("/", {
-    //             path: "users",
-    //             method: "GET",
-    //             params: {populate: "*"},
-    //         }).catch((error) => {
-    //             console.error("Error fetching users:", error);
-    //         });
-    //         const users = response?.data as UserI[] || [];
-    //         setUsers(users);
-    //     } catch (error: any) {
-    //         console.error("Error fetching users:", error);
-    //         setUsers([]);
-    //     }
-    // };
-    //
-    // useEffect(() => {
-    //     getMembers();
-    // }, []);
-
-    // const getProxyImageUrl = (url: string): string => {
-    //     return `/api/image-proxy?url=${encodeURIComponent(url)}`;
-    // };
-
 
     return (
         <>
@@ -59,13 +32,13 @@ const Contact: React.FC = () => {
                 />
             </PageLayout>
 
-            <PageLayout isContainer={true} className="mt-5 mb-[0px]">
-                <div className="col-md-8">
+            <PageLayout isContainer={true} className="pt-16">
+                <div className="col-md-8 mb-10">
                     <div className={"text-l mb-3 font-b"}>Get in touch with us:</div>
                     <ContactForm/>
                 </div>
-                <div className="col-md-4 mt-[50px] md:mt-0">
-                    <div className={"text-l mb-3 font-b"}>Student-Driven Project</div>
+                <div className="col-md-4 ">
+                    <div className={"text-l mb-3 font-b  mt-[0px] "}>Student-Driven Project</div>
                     <div>
                         This website is proudly designed and developed by a team of college students and dedicated
                         volunteers as part of an exciting educational initiative aimed at gaining real-world experience
@@ -79,7 +52,7 @@ const Contact: React.FC = () => {
                 </div>
             </PageLayout>
 
-            <PageLayout isContainer={true} className="mt-[50px] mb-[50px]">
+            <PageLayout isContainer={true} className=" pb-5 mb-10">
                 <div className="col">
                     <div className={"text-l mb-3 font-b"}>Our team:</div>
                     <div className="file flex-initial">

@@ -17,7 +17,7 @@ const Index = () => {
 
             {/* First Section with Background Image */}
             <PageLayout isContainer={false}
-                        className="mb-[25px] bg-cover md:h-[70vh] bg-center bg-[url('/main-promo.png')]">
+                        className=" bg-cover md:h-[70vh] bg-center bg-[url('/main-promo.png')]">
                 <div
                     className="col-12 py-[50px] p-5 m-0 flex items-center justify-center text-center h-full bg-black bg-opacity-75">
                     <section>
@@ -42,14 +42,14 @@ const Index = () => {
             </PageLayout>
 
             {/* Mission Statement Section */}
-            <PageLayout isContainer={true} className=" py-16">
+            <PageLayout isContainer={true} className="py-24">
                 <motion.section
                     className="text-center"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 0.8}}
                 >
-                    <h2 className="text-xl font-b text-mina mb-2">Our Mission</h2>
+                    <h2 className="text-xl font-b text-mina mb-3">Our Mission</h2>
                     <p className="text-m text-mina">
                         At Kerry College, we are committed to creating an inclusive community where students can excel
                         academically and personally. We aim to inspire innovation, support achievement, and nurture
@@ -61,8 +61,10 @@ const Index = () => {
             </PageLayout>
 
             {/* Resource Cards Section with Hover Effects */}
-            <PageLayout isContainer={true} className="mb-[25px] px-3">
+            <PageLayout isContainer={true} className="pb-24 px-4">
                 <div className="col-12 py-[50px] p-0 m-0">
+                    <h2 className="text-xl font-b text-center text-mina mb-3">Site Sections</h2>
+
                     <motion.section
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
                         initial={{opacity: 0}}
@@ -132,12 +134,13 @@ const Index = () => {
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.98}}
                         >
-                            <h2 className="text-l font-b text-mina mb-4">Contact Directory</h2>
+                            <h2 className="text-l font-b text-mina mb-4">Contact & Staff</h2>
                             <p className="text-s text-mina">
-                                Find contact information for college departments and staff.
+                                Find contact details for Kerry College&#39;s website staff and departments, along with a
+                                feedback form.
                             </p>
                             <Link href="/contact" className="text-accent text-m mt-4 inline-block hover:underline">
-                                View Contacts
+                                Contact Us
                             </Link>
                         </motion.div>
                     </motion.section>
@@ -145,7 +148,7 @@ const Index = () => {
             </PageLayout>
 
             {/* Collaboration Section with Bounce Effect */}
-            <PageLayout isContainer={true} className=" pb-16 md:pt-8">
+            <PageLayout isContainer={true} className=" pb-24">
                 <motion.section
                     className="text-center"
                     initial={{opacity: 0, y: 50}}
@@ -168,7 +171,7 @@ const Index = () => {
             {/* Founder Message Section with Fade-in Effect */}
             <PageLayout isContainer={false} className="bg-mina">
                 <PageLayout isContainer={true} className="">
-                    <section className="py-[50px]">
+                    <section className="py-14">
                         <div className="text-white text-center">
                             <PageLayout isContainer={false}
                                         className="flex gap-[25px] flex-col md:flex-row justify-start items-center">

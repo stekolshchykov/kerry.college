@@ -56,7 +56,7 @@ const Index = () => {
 
             <Info/>
 
-            <PageLayout isContainer={true} className={" mt-[50px] mb-[50px]"}>
+            <PageLayout isContainer={true} className={" my-16"}>
                 <div className="col">
                     <div className={"text-xl mb-0 font-b"}>{article?.title}</div>
                     <div className={"text-s"}>{article?.author}</div>

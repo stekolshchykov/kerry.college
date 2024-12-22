@@ -24,7 +24,7 @@ const FooterUi = () => {
     return (
         <div className="container-full border-t-[1px] border-mina max-w-[100vw] overflow-hidden">
             <div className="row">
-                <div className="col py-[50px]">
+                <div className="col py-24">
                     <div className="container max-w-[1200px]">
                         <div className="row">
                             <div className="col">

@@ -1,7 +1,7 @@
 import {dataArticles} from "@/data";
 import PageLayout from "@/layout/page-layout";
 import PageInfoUi from "@/ui/page-info-ui";
-import {Head} from "next/document";
+import Head from 'next/head';
 import React from "react";
 
 const Index = () => {
@@ -28,7 +28,7 @@ const Index = () => {
                     }
                 />
             </PageLayout>
-            <PageLayout isContainer={true} className={"mt-[50px] mb-[50px]"}>
+            <PageLayout isContainer={true} className={"my-16"}>
                 <div className="col">
                     {dataArticles.map((article, index) => {
                         return (

@@ -64,7 +64,7 @@ const Home = observer(({posts}: { posts: number }) => {
                 />
             </PageLayout>
 
-            <PageLayout isContainer={true} className={"mb-[25px] mt-[50px] mx-3"}>
+            <PageLayout isContainer={true} className={"mt-24 mx-3"}>
                 <div className="col-12 py-[50px] p-0 m-0">
                     <div className={"flex max-md:flex-col gap-3 justify-between bg-black p-[25px]"}>
                         <SelectUI
@@ -85,7 +85,7 @@ const Home = observer(({posts}: { posts: number }) => {
                 </div>
             </PageLayout>
 
-            <PageLayout isContainer={true} className={"mb-[50px] max-w-[1280px] m-auto"}>
+            <PageLayout isContainer={true} className={"mb-16 mt-5 max-w-[1280px] m-auto"}>
                 {selectedCourse && (
                     <div className="col-12 overflow-x-auto mb-[50px] px-0">
                         <table className={"min-w-full"}>
