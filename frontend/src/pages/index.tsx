@@ -42,7 +42,7 @@ const Index = () => {
             </PageLayout>
 
             {/* Mission Statement Section */}
-            <PageLayout isContainer={true} className="bg-background py-16">
+            <PageLayout isContainer={true} className=" py-16">
                 <motion.section
                     className="text-center"
                     initial={{opacity: 0}}
@@ -70,7 +70,7 @@ const Index = () => {
                         transition={{duration: 1}}
                     >
                         <motion.div
-                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            className=" p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.98}}
                         >
@@ -85,7 +85,7 @@ const Index = () => {
                         </motion.div>
 
                         <motion.div
-                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            className=" p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.98}}
                         >
@@ -99,7 +99,7 @@ const Index = () => {
                         </motion.div>
 
                         <motion.div
-                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            className=" p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.98}}
                         >
@@ -114,7 +114,7 @@ const Index = () => {
                         </motion.div>
 
                         <motion.div
-                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            className=" p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.98}}
                         >
@@ -128,7 +128,7 @@ const Index = () => {
                         </motion.div>
 
                         <motion.div
-                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            className=" p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
                             whileHover={{scale: 1.05}}
                             whileTap={{scale: 0.98}}
                         >
@@ -145,7 +145,7 @@ const Index = () => {
             </PageLayout>
 
             {/* Collaboration Section with Bounce Effect */}
-            <PageLayout isContainer={true} className="bg-background pb-16 md:pt-8">
+            <PageLayout isContainer={true} className=" pb-16 md:pt-8">
                 <motion.section
                     className="text-center"
                     initial={{opacity: 0, y: 50}}
