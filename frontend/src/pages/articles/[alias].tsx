@@ -1,8 +1,24 @@
 import {dataArticles} from "@/data";
 import PageLayout from "@/layout/page-layout";
+import PageInfoUi from "@/ui/page-info-ui";
 import {useRouter} from "next/router";
 import React from "react";
 
+const Info = () => {
+
+    return <PageLayout isContainer={true} className="bg-mina text-white">
+        <PageInfoUi
+            title="Article by Our Author"
+            subTitle={
+                <div>
+                    On this page, you can read an insightful article written by one of our authors. Explore
+                    their perspective on the topic and gain valuable knowledge.
+                </div>
+            }
+        />
+    </PageLayout>
+
+}
 const Index = () => {
 
     const router = useRouter()
@@ -12,6 +28,7 @@ const Index = () => {
 
     if (!article)
         return <>
+            <Info/>
             <PageLayout isContainer={true} className={" mt-[50px] mb-[50px]"}>
                 <div className="col">
                     <div>Sorry, the article you are looking for could not be found.</div>
@@ -25,6 +42,7 @@ const Index = () => {
 
     else
         return <>
+            <Info/>
             <PageLayout isContainer={true} className={" mt-[50px] mb-[50px]"}>
                 <div className="col">
                     <div className={"text-xl mb-0 font-b"}>{article?.title}</div>
