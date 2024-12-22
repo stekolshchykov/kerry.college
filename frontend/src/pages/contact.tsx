@@ -79,7 +79,6 @@ const Contact: React.FC = () => {
                                 {dataMembers.map((member) => (
                                     <li key={member.name} className="flex flex-col gap-1">
                                         <img
-                                            // src={getProxyImageUrl(user.avatar ? user.avatar[0]?.url : fallbackImage)}
                                             src={member.img || fallbackImage}
                                             alt="avatar"
                                             width={180}

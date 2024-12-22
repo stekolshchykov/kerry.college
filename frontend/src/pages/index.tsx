@@ -1,146 +1,206 @@
 import PageLayout from "@/layout/page-layout";
-import {useRootStore} from "@/providers/RootStoreProvider";
-import ContentMaestroUi from "@/ui/content-maestro-ui";
-import PageInfoUi from "@/ui/page-info-ui";
-import SelectUI from "@/ui/select-ui";
-import {observer} from "mobx-react-lite";
+import {motion} from "framer-motion";
+import Head from 'next/head';
 import React from "react";
 
-export async function getStaticProps() {
-    return {
-        props: {
-            posts: 112211,
-        },
-    };
-}
-
-const Home = observer(({posts}: { posts: number }) => {
-    console.log(posts);
-    const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Software Development");
-    const [currentDayI, setCurrentDayI] = React.useState<number | null>(null);
-
-    const {scheduleStore} = useRootStore();
-    const selectedCourse = scheduleStore.getCourseByTitle(selectedCourseTitle);
-
-    // Обновляем текущий день недели при монтировании
-    React.useEffect(() => {
-        const currentDay = new Date().toLocaleDateString("en-US", {weekday: 'long'});
-        const dayIndex = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].indexOf(currentDay);
-        if (dayIndex !== -1) {
-            setCurrentDayI(dayIndex);
-        }
-    }, []);
-
-    // Проверка, является ли день сегодняшним
-    const isToday = (day: string, index: number) => index === currentDayI;
-
-    React.useEffect(() => {
-        const element = document.querySelector(".today-column");
-        if (element) {
-            element.scrollIntoView({behavior: "smooth", block: "nearest", inline: "start"});
-        }
-    }, [currentDayI]);
-
+const Index = () => {
     return (
         <>
-            <PageLayout isContainer={true} className={"bg-mina text-white"}>
-                <PageInfoUi
-                    title={"Schedule"}
-                    subTitle={
-                        <div>
-                            Access the class schedule for all campuses and courses, providing essential details on
-                            timings and locations.
-                        </div>
-                    }
-                />
-            </PageLayout>
+            <Head>
+                <title>Kerry College Student Portal</title>
+                <meta name="description"
+                      content="Official student portal of Kerry College with resources, articles, schedules, and more."/>
+                <meta name="keywords" content="Kerry College, student portal, resources, schedules, articles"/>
+                <meta name="author" content="Kerry College"/>
+            </Head>
 
-            <PageLayout isContainer={true} className={"mb-[25px] mt-[50px]"}>
-                <div className="col-12 py-[50px] p-0 m-0">
-                    <div className={"flex max-md:flex-col gap-3 justify-between bg-black p-[25px]"}>
-                        <SelectUI
-                            className={"text-white"}
-                            options={["Clash Road"]}
-                            onSelect={e => console.log(e)}
-                            label={"Choose your campus:"}
-                            initValue={"Clash Road"}
-                        />
-                        <SelectUI
-                            className={"text-white"}
-                            options={scheduleStore.getCourseTitles()}
-                            onSelect={setSelectedCourseTitle}
-                            label={"Choose a course:"}
-                            initValue={"Software Development"}
-                        />
-                    </div>
+            {/* First Section with Background Image */}
+            <PageLayout isContainer={false}
+                        className="mb-[25px] bg-cover bg-center h-[70vh] bg-[url('/main-promo.png')]">
+                <div
+                    className="col-12 py-[50px] p-0 m-0 flex items-center justify-center text-center h-full bg-black bg-opacity-75">
+                    <section>
+                        <motion.h1
+                            className="text-xxxl font-b text-white mb-4"
+                            initial={{opacity: 0, y: -50}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 1}}
+                        >
+                            Welcome to Kerry College Student Portal
+                        </motion.h1>
+                        <motion.p
+                            className="text-l text-accent mt-4"
+                            initial={{opacity: 0, y: 50}}
+                            animate={{opacity: 1, y: 0}}
+                            transition={{duration: 1}}
+                        >
+                            Your one-stop destination for articles, schedules, campus maps, and contacts.
+                        </motion.p>
+                    </section>
                 </div>
             </PageLayout>
 
-            <PageLayout isContainer={true} className={"mb-[50px] max-w-[1280px] m-auto"}>
-                {selectedCourse && (
-                    <div className="col-12 overflow-x-auto mb-[50px] px-0">
-                        <table className={"min-w-full"}>
-                            <thead>
-                            <tr>
-                                <th className={"border-[1px] p-3 text-[18px] min-w-[120px]"}></th>
-                                {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day, index) => (
-                                    <th
-                                        key={index}
-                                        className={`border-[1px] p-3 text-[18px] min-w-[200px] ${
-                                            isToday(day, index) ? "bg-yellow-300 today-column" : ""
-                                        }`}
-                                    >
-                                        {day}
-                                    </th>
-                                ))}
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {scheduleStore.data.times?.map((time, timeIndex) => {
-                                const isOddRow = timeIndex % 2 === 0;
-                                const isRestRow = timeIndex === 2 || timeIndex === 5;
-                                return (
-                                    <tr
-                                        key={timeIndex}
-                                        className={`${
-                                            isOddRow && !isRestRow ? "bg-gray-50" : ""
-                                        } ${isRestRow ? "bg-[#8888ff]" : ""} text-left align-top`}
-                                    >
-                                        <td className={"border-[1px] p-3 w-[120px]"}>{time}</td>
-                                        {selectedCourse?.schedule.map((daySchedule, dayIndex) => {
-                                            const isCurrentDay = currentDayI === dayIndex;
-                                            return (
-                                                <td
-                                                    key={dayIndex}
-                                                    className={`border-[1px] p-3 text-left align-top ${
-                                                        isCurrentDay && !isRestRow ? "bg-yellow-300" : ""
-                                                    }`}
-                                                >
-                                                    {!daySchedule[timeIndex]?.title ? (
-                                                        <div style={{backgroundColor: "blue"}}></div>
-                                                    ) : (
-                                                        <>
-                                                            <div>{daySchedule[timeIndex]?.title}</div>
-                                                            {daySchedule[timeIndex]?.room && (
-                                                                <div>R{daySchedule[timeIndex]?.room}</div>
-                                                            )}
-                                                        </>
-                                                    )}
-                                                </td>
-                                            );
-                                        })}
-                                    </tr>
-                                );
-                            })}
-                            </tbody>
-                        </table>
-                    </div>
-                )}
+            {/* Mission Statement Section */}
+            <PageLayout isContainer={true} className="bg-background py-[50px]">
+                <motion.section
+                    className="text-center mb-10"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 0.8}}
+                >
+                    <h2 className="text-xl font-b text-mina mb-4">Our Mission</h2>
+                    <p className="text-m text-mina">
+                        At Kerry College, we are committed to creating an inclusive community where students can excel
+                        academically and personally. We aim to inspire innovation, support achievement, and nurture
+                        growth in every aspect of student life. Through collaboration and access to resources, we
+                        empower students to turn their aspirations into reality. Our mission is to be a cornerstone for
+                        learning, growth, and a vibrant campus culture that celebrates diversity and creativity.
+                    </p>
+                </motion.section>
             </PageLayout>
 
-            <ContentMaestroUi/>
+            {/* Resource Cards Section with Hover Effects */}
+            <PageLayout isContainer={true} className="mb-[25px] mt-[50px]">
+                <div className="col-12 py-[50px] p-0 m-0">
+                    <motion.section
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{duration: 1}}
+                    >
+                        <motion.div
+                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.98}}
+                        >
+                            <h2 className="text-l font-b text-mina mb-4">Student Articles</h2>
+                            <p className="text-s text-mina">
+                                Explore inspiring articles written by our students, sharing their experiences and
+                                knowledge.
+                            </p>
+                            <a href="/articles" className="text-accent text-m mt-4 inline-block hover:underline">
+                                Read Articles
+                            </a>
+                        </motion.div>
+
+                        <motion.div
+                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.98}}
+                        >
+                            <h2 className="text-l font-b text-mina mb-4">Class Schedules</h2>
+                            <p className="text-s text-mina">
+                                Keep track of your classes and stay on top of your academic journey.
+                            </p>
+                            <a href="/schedule" className="text-accent text-m mt-4 inline-block hover:underline">
+                                View Schedules
+                            </a>
+                        </motion.div>
+
+                        <motion.div
+                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.98}}
+                        >
+                            <h2 className="text-l font-b text-mina mb-4">Holiday Calendar</h2>
+                            <p className="text-s text-mina">
+                                Check the dates for holidays and plan your breaks effectively.
+                            </p>
+                            <a href="/holiday"
+                               className="text-accent text-m mt-4 inline-block hover:underline">
+                                View Calendar
+                            </a>
+                        </motion.div>
+
+                        <motion.div
+                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.98}}
+                        >
+                            <h2 className="text-l font-b text-mina mb-4">Campus Maps</h2>
+                            <p className="text-s text-mina">
+                                Navigate the college with ease using our detailed campus maps.
+                            </p>
+                            <a href="/map" className="text-accent text-m mt-4 inline-block hover:underline">
+                                Explore Maps
+                            </a>
+                        </motion.div>
+
+                        <motion.div
+                            className="bg-background p-6 shadow-xl rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.98}}
+                        >
+                            <h2 className="text-l font-b text-mina mb-4">Contact Directory</h2>
+                            <p className="text-s text-mina">
+                                Find contact information for college departments and staff.
+                            </p>
+                            <a href="/contact" className="text-accent text-m mt-4 inline-block hover:underline">
+                                View Contacts
+                            </a>
+                        </motion.div>
+                    </motion.section>
+                </div>
+            </PageLayout>
+
+            {/* Collaboration Section with Bounce Effect */}
+            <PageLayout isContainer={true} className="bg-background py-[50px]">
+                <motion.section
+                    className="text-center"
+                    initial={{opacity: 0, y: 50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 1}}
+                >
+                    <h2 className="text-xl font-b text-mina mb-4">Join Us in Collaboration</h2>
+                    <p className="text-m text-mina">
+                        We invite all enthusiastic students and faculty members to collaborate with us. Whether you
+                        have creative ideas, articles, or projects, we’d love to hear from you. Let’s build a thriving
+                        community
+                        together!
+                    </p>
+                    <a href="/contact" className="text-accent text-m mt-4 inline-block hover:underline">
+                        Contact Us
+                    </a>
+                </motion.section>
+            </PageLayout>
+
+            {/* Founder Message Section with Fade-in Effect */}
+            <PageLayout isContainer={false} className="bg-mina">
+                <PageLayout isContainer={true} className="">
+                    <section className="py-[50px]">
+                        <div className="text-white text-center">
+                            <PageLayout isContainer={false}
+                                        className="flex gap-[25px] flex-col md:flex-row justify-start items-center">
+                                <div className="w-full md:max-w-[150px]">
+                                    <img
+                                        src={"members/stekolshchykov.png"}
+                                        alt="avatar"
+                                        width={130}
+                                        height={130}
+                                        className="rounded"
+                                    />
+                                </div>
+                                <div className="text-m">
+                                    <div className={"text-left mb-3 text-s text-[#E79730] leading-[0.5]"}>
+                                        Co-Founder
+                                    </div>
+                                    <p className="text-left">
+                                        This platform was created to
+                                        improve and enhance the educational experience for both students and faculty. By
+                                        providing easy access to essential resources such as schedules, articles, campus
+                                        maps, and more, this portal aims to support academic growth, streamline
+                                        communication, and foster a collaborative learning environment. I built this
+                                        site with the goal of helping everyone in our community thrive and succeed in
+                                        their academic journey. Visit the contact page for feedback or assistance!
+                                    </p>
+                                </div>
+                            </PageLayout>
+                        </div>
+                    </section>
+                </PageLayout>
+            </PageLayout>
         </>
     );
-});
+};
 
-export default Home;
+export default Index;

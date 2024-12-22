@@ -31,6 +31,7 @@ module.exports = {
                 l: ['24px', 'auto'],
                 xl: ['28px', 'auto'],
                 xxl: ['36px', 'auto'],
+                xxxl: ['56px', 'auto'],
             },
             spacing: {
                 32: '32px',

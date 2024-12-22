@@ -12,9 +12,9 @@ const HeaderUi = () => {
     const path = router.pathname;
 
     const links = [
-        {title: "Home", link: "/home", isActive: path === "/home", isComingSoon: true},
+        {title: "Home", link: "/", isActive: path === "/", isComingSoon: false},
         // {title: "News", link: "/news", isActive: path === "/news", isComingSoon: true},
-        {title: "Schedule", link: "/", isActive: path === "/", isComingSoon: false},
+        {title: "Schedule", link: "/schedule", isActive: path === "/schedule", isComingSoon: false},
         {title: "Holiday", link: "/holiday", isActive: path === "/holiday", isComingSoon: false},
         {title: "Map", link: "/map", isActive: path === "/map", isComingSoon: false},
         // {title: "Staff", link: "/staff", isActive: path === "/staff", isComingSoon: false},
