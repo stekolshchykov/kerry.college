@@ -20,6 +20,39 @@ export interface StaffCardI {
     job: string;
 }
 
+// Members
+
+export interface MemberI {
+    name: string;
+    img: string;
+    job: string;
+}
+
+const dataMembers: MemberI[] = [
+    {
+        name: "Vitalii Stekolshchykov",
+        img: "members/stekolshchykov.png",
+        job: "Author"
+    },
+    {
+        name: "Oleksandr Dosenko",
+        img: "",
+        job: "Volunteer"
+    },
+    {
+        name: "Vitalii Konovaliuk",
+        img: "",
+        job: "Author"
+    },
+    {
+        name: "Mykhailo Katrukha",
+        img: "",
+        job: "Author"
+    }
+];
+
+// ---
+
 const dataStaff: StaffCardI[] = [
     {
         name: "Michael Jordan",
@@ -1630,4 +1663,4 @@ const markedDates: MarkedDatesI = {
 };
 
 
-export {dataCourse, dataStaff, markedDates};
+export {dataCourse, dataStaff, markedDates, dataMembers};
