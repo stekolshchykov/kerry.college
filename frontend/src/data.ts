@@ -22,43 +22,51 @@ export interface StaffCardI {
 
 // Articles
 
-export interface ArticleI {
+interface ArticleI {
     alias: string;
     title: string;
     img?: string;
     description: string;
     text: string;
     author: string;
+    keywords?: string; // Новое поле для ключевых слов
+    ogTitle?: string;  // Новое поле для Open Graph Title
+    ogDescription?: string;  // Новое поле для Open Graph Description
+    ogImage?: string; // Новое поле для Open Graph Image
 }
 
-const dataArticles: ArticleI[] = [
+const dataArticles = [
     {
         alias: "back-to-education-allowance",
         title: "How to Apply for the Back to Education Allowance (BTEA) in Ireland",
         description: "Learn how to receive the Back to Education Allowance (BTEA) and Basic Out-of-Pocket Expenses (BOTP) weekly payments in Ireland. This guide outlines eligibility criteria, application steps, and tips for maintaining payments while pursuing your education or professional training.",
         text: `
-    <div class="font-bold text-m2">To receive Back to Education Allowance (BTEA) and Basic Out-of-Pocket Expenses (BOTP) weekly payments in Ireland, you must:</div>
-    <div class="font-bold">1. Registration in the BTEA program:</div>
-    BTEA is a government program that helps people on welfare to return to education by covering some of the costs. It is intended for those who wish to complete educational courses or professional training.
-    
-    <div class="font-bold">To get a BTEA you must:</div>
-    • Be 21 years of age or older (or 24 years of age for advanced training programs).<br>
-    • Receive social benefits (eg Jobseeker's Allowance, Jobseeker's Benefit) for a certain minimum period.<br>
-    • Confirm that your studies will lead to a new qualification that can improve your chances of employment.<br>
-    <div class="font-bold">2. Apply for participation in the BTEA program:</div>
-    • Contact your local Social Security office (Intreo Centre).<br>
-    • Apply for the BTEA program. You will need to confirm your education and social security status.<br>
-    <div class="font-bold">3. Receiving weekly payments:</div>
-    • As a BTEA member, you will receive a fixed weekly payment which can replace your current benefit (eg Jobseeker's Allowance).<br>
-    • Payments will be made to the bank account specified during registration.<br>
-    • In addition, additional training costs such as training materials and transport costs may be reimbursed under the BOTP.<br>
-    <div class="font-bold">4. Conditions for continuation of payments:</div>
-    • To receive payments, you must regularly attend training courses and comply with the program requirements. Lack of progress may result in termination of payments.<br>
-    • If there is a need for changes in the study program or interruptions, the social security service should be notified.<br>
-    <div class="font-bold">Additional information:</div>
-    Please consult your local Intreo office or gov.ie for specific conditions, as requirements may vary depending on your individual situation and institution.
-`,
-        author: "Mykhailo Katrukha"
+        <div class="font-bold text-m2">To receive Back to Education Allowance (BTEA) and Basic Out-of-Pocket Expenses (BOTP) weekly payments in Ireland, you must:</div>
+        <div class="font-bold">1. Registration in the BTEA program:</div>
+        BTEA is a government program that helps people on welfare to return to education by covering some of the costs. It is intended for those who wish to complete educational courses or professional training.
+        
+        <div class="font-bold">To get a BTEA you must:</div>
+        • Be 21 years of age or older (or 24 years of age for advanced training programs).<br>
+        • Receive social benefits (eg Jobseeker's Allowance, Jobseeker's Benefit) for a certain minimum period.<br>
+        • Confirm that your studies will lead to a new qualification that can improve your chances of employment.<br>
+        <div class="font-bold">2. Apply for participation in the BTEA program:</div>
+        • Contact your local Social Security office (Intreo Centre).<br>
+        • Apply for the BTEA program. You will need to confirm your education and social security status.<br>
+        <div class="font-bold">3. Receiving weekly payments:</div>
+        • As a BTEA member, you will receive a fixed weekly payment which can replace your current benefit (eg Jobseeker's Allowance).<br>
+        • Payments will be made to the bank account specified during registration.<br>
+        • In addition, additional training costs such as training materials and transport costs may be reimbursed under the BOTP.<br>
+        <div class="font-bold">4. Conditions for continuation of payments:</div>
+        • To receive payments, you must regularly attend training courses and comply with the program requirements. Lack of progress may result in termination of payments.<br>
+        • If there is a need for changes in the study program or interruptions, the social security service should be notified.<br>
+        <div class="font-bold">Additional information:</div>
+        Please consult your local Intreo office or gov.ie for specific conditions, as requirements may vary depending on your individual situation and institution.
+        `,
+        author: "Mykhailo Katrukha",
+        keywords: "BTEA, education allowance, Ireland, financial support, back to education",
+        ogTitle: "How to Apply for the Back to Education Allowance (BTEA) in Ireland",
+        ogDescription: "This article explains the eligibility criteria and application process for the Back to Education Allowance (BTEA) in Ireland, along with tips to maintain payments.",
+        ogImage: "https://www.kerry.college/images/btea-article.jpg", // Пример изображения
     },
     {
         alias: "impact-of-meditation-and-power-naps-on-productivity",
@@ -85,12 +93,14 @@ const dataArticles: ArticleI[] = [
         <div>The EnergyPod is designed for short naps, offering a practical solution for recovery during work hours. It could be an excellent addition to any workplace or study environment with a dedicated power nap space.</div>
         <div class="font-bold text-m2">Conclusion</div>
         <div>Although power naps and meditation have yet to become widely popular among the survey respondents, the study suggests that these practices hold significant potential for enhancing focus and productivity. Integrating short breaks for meditation or naps into daily routines can help reduce stress, improve cognitive function, and increase productivity. In some cases, staying 15 minutes longer at work or school to rest may be more beneficial than arriving on time without adequate sleep.</div>
-    `,
-        author: "Vitalii Stekolshchykov"
+        `,
+        author: "Vitalii Stekolshchykov",
+        keywords: "meditation, power naps, productivity, mindfulness, focus, energy management",
+        ogTitle: "The Impact of Meditation and Power Naps on Mindfulness and Productivity",
+        ogDescription: "Explore the effects of meditation and power naps on mindfulness and productivity, based on a survey conducted among professionals and college students.",
+        ogImage: "https://www.kerry.college/images/meditation-productivity.jpg", // Пример изображения
     }
-
 ]
-
 //
 
 // Members

@@ -15,7 +15,6 @@ export async function getStaticProps() {
 }
 
 const Home = observer(({posts}: { posts: number }) => {
-    console.log(posts);
     const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Software Development");
     const [currentDayI, setCurrentDayI] = React.useState<number | null>(null);
 
@@ -44,12 +43,15 @@ const Home = observer(({posts}: { posts: number }) => {
     return (
         <>
             <Head>
-                <title>Kerry College Schedules</title>
                 <meta name="description"
-                      content="Access the official schedules for classes, exams, and events at Kerry College. Stay updated with all academic timings."/>
-                <meta name="keywords"
-                      content="Kerry College, schedules, class schedule, exam timetable, events, academic calendar"/>
-                <meta name="author" content="Vitalii Stekolshchykov"/>
+                      content="View the academic schedule at Kerry College. Stay updated on classes, deadlines, and events."/>
+                <meta name="keywords" content="Kerry College schedule, academic calendar, class schedule, events"/>
+                <meta property="og:title" content="Kerry College - Schedule"/>
+                <meta property="og:description"
+                      content="View the academic schedule at Kerry College. Stay updated on classes, deadlines, and events."/>
+                <meta property="og:url" content="https://www.kerry.college/schedule"/>
+                <meta property="og:type" content="website"/>
+                <meta name="robots" content="index, follow"/>
             </Head>
 
             <PageLayout isContainer={true} className={"bg-mina text-white"}>

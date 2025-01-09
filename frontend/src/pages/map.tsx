@@ -8,12 +8,16 @@ const Map = () => {
 
     return <>
         <Head>
-            <title>Kerry College Campus Maps</title>
             <meta name="description"
-                  content="Explore the official campus maps of Kerry College, find building locations, directions, and campus facilities."/>
+                  content="Access the campus map of Kerry College. Find buildings, departments, and key locations."/>
             <meta name="keywords"
-                  content="Kerry College, campus maps, building locations, directions, campus facilities"/>
-            <meta name="author" content="Vitalii Stekolshchykov"/>
+                  content="Kerry College map, campus locations, campus buildings, Kerry College directions"/>
+            <meta property="og:title" content="Kerry College - Campus Map"/>
+            <meta property="og:description"
+                  content="Access the campus map of Kerry College. Find buildings, departments, and key locations."/>
+            <meta property="og:url" content="https://www.kerry.college/map"/>
+            <meta property="og:type" content="website"/>
+            <meta name="robots" content="index, follow"/>
         </Head>
 
         <PageLayout isContainer={true} className={"bg-mina text-white"}>

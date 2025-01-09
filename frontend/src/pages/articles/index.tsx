@@ -8,12 +8,16 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>Kerry College Articles</title>
                 <meta name="description"
-                      content="Explore informative articles on various topics related to Kerry College, including academic resources, student life, and campus news."/>
+                      content="Explore informative articles and resources from Kerry College. Topics include education, productivity, and student life."/>
                 <meta name="keywords"
-                      content="Kerry College, articles, academic resources, student life, campus news, college blog"/>
-                <meta name="author" content="Vitalii Stekolshchykov"/>
+                      content="Kerry College articles, student resources, education, productivity, student life"/>
+                <meta property="og:title" content="Kerry College - Articles"/>
+                <meta property="og:description"
+                      content="Explore informative articles and resources from Kerry College. Topics include education, productivity, and student life."/>
+                <meta property="og:url" content="https://www.kerry.college/articles"/>
+                <meta property="og:type" content="website"/>
+                <meta name="robots" content="index, follow"/>
             </Head>
 
             <PageLayout isContainer={true} className="bg-mina text-white">

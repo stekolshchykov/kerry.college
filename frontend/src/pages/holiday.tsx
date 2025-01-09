@@ -56,12 +56,16 @@ const Holiday: React.FC = () => {
         <>
 
             <Head>
-                <title>Kerry College Holidays</title>
                 <meta name="description"
-                      content="Stay updated with the official holiday schedule for Kerry College, including academic breaks, public holidays, and events."/>
+                      content="Check the holiday schedule for Kerry College students. Find out when the campus will be closed."/>
                 <meta name="keywords"
-                      content="Kerry College, holidays, academic breaks, public holidays, events, holiday schedule"/>
-                <meta name="author" content="Vitalii Stekolshchykov"/>
+                      content="Kerry College holidays, academic breaks, campus closures, holiday schedule"/>
+                <meta property="og:title" content="Kerry College - Holiday Schedule"/>
+                <meta property="og:description"
+                      content="Check the holiday schedule for Kerry College students. Find out when the campus will be closed."/>
+                <meta property="og:url" content="https://www.kerry.college/holiday"/>
+                <meta property="og:type" content="website"/>
+                <meta name="robots" content="index, follow"/>
             </Head>
 
             <PageLayout isContainer={true} className={"bg-mina text-white"}>

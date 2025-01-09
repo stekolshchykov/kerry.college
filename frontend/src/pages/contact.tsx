@@ -13,12 +13,15 @@ const Contact: React.FC = () => {
         <>
 
             <Head>
-                <title>Kerry College Contacts</title>
                 <meta name="description"
-                      content="Find the official contact information for Kerry College, including departments, staff, and support services."/>
-                <meta name="keywords"
-                      content="Kerry College, contacts, staff directory, support services, department contacts"/>
-                <meta name="author" content="Vitalii Stekolshchykov"/>
+                      content="Contact Kerry College for inquiries, support, and more. Find our contact information and get in touch with us."/>
+                <meta name="keywords" content="Kerry College contact, contact information, inquiries, support"/>
+                <meta property="og:title" content="Kerry College - Contact"/>
+                <meta property="og:description"
+                      content="Contact Kerry College for inquiries, support, and more. Find our contact information and get in touch with us."/>
+                <meta property="og:url" content="https://www.kerry.college/contact"/>
+                <meta property="og:type" content="website"/>
+                <meta name="robots" content="index, follow"/>
             </Head>
 
             <PageLayout isContainer={true} className="bg-mina text-white">
