@@ -6,15 +6,15 @@ import {observer} from "mobx-react-lite";
 import Head from "next/head";
 import React from "react";
 
-export async function getStaticProps() {
-    return {
-        props: {
-            posts: 112211,
-        },
-    };
-}
+// export async function getStaticProps() {
+//     return {
+//         props: {
+//             posts: 112211,
+//         },
+//     };
+// }
 
-const Home = observer(({posts}: { posts: number }) => {
+const Home = observer(() => {
     const [selectedCourseTitle, setSelectedCourseTitle] = React.useState<string>("Software Development");
     const [currentDayI, setCurrentDayI] = React.useState<number | null>(null);
 

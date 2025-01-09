@@ -35,7 +35,7 @@ interface ArticleI {
     ogImage?: string; // Новое поле для Open Graph Image
 }
 
-const dataArticles = [
+const dataArticles: ArticleI[] = [
     {
         alias: "back-to-education-allowance",
         title: "How to Apply for the Back to Education Allowance (BTEA) in Ireland",
